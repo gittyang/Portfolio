@@ -1,0 +1,42 @@
+header {
+  background-color: $primary-color;
+  height: 100vh;
+  width: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  position: fixed;
+  z-index: 5;
+  
+  .menu-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    list-style-type: none;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    .nav-item {
+      padding: 2rem 0rem 0rem 8rem;
+      margin-right: 2rem;
+    }
+
+    .nav-link {
+      white-space: nowrap;
+      color: $fourth-color;
+    }
+
+    .nav-link:hover {
+      @include easeOutNAV();
+    }
+
+    .nav-item-line {
+      background: linear-gradient(90deg, rgb(32, 36, 153) 30%, rgb(87, 95, 204) 90%);
+      margin: 1rem 2rem;
+      padding: 0rem 0rem 2px 8rem;
+    }
+  }
+  }

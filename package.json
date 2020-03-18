@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w src/scss/ -o build/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gittyang/Portfolio.git"
+  },
+  "author": "Tou Toua Yang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gittyang/Portfolio/issues"
+  },
+  "homepage": "https://github.com/gittyang/Portfolio#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

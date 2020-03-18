@@ -1,0 +1,457 @@
+@import 'config';
+@import 'header';
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-left: 200px;
+
+// --- Home Section --- //
+#home {
+  color: $fourth-color;
+  padding: 5rem;
+  height: 100vh;;
+  background: $home-image;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: rgba(0, 0, 0, .8);
+  }
+
+  .home-title {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: .5rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      margin-left: .1rem;
+    }
+  }
+
+  .cta {
+    display: flex;
+    z-index: 1;
+
+    .button-action {
+      margin-right: .5rem;
+      padding: 1rem 1.5rem;
+      border: 2px solid $tertiary-color;
+      background: $primary-color;
+      border-radius: 2px;
+      color: $fourth-color;
+      font-size: 1rem;
+      font-weight: 500;
+      
+      &:hover {
+        cursor: pointer;
+        @include easeOutBG();
+      }
+    }
+  }
+}  // --- End of Home Section --- //
+
+
+// --- About Section --- //
+#about {
+  padding: 5rem;
+  height: 100vh;
+  background: $about-image;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: rgba(10, 35, 46, 0.8);
+  }
+
+  .about-description {
+    color: $fourth-color;
+    width: 900px;
+    position: absolute;
+    z-index: 1;
+    padding: 3rem;
+    border: 2px solid darken(grey, 40);
+    background: rgb(32, 43, 48);
+
+    p {
+      padding-bottom: .5rem;
+    }
+  }
+} // --- End of About Section --- //
+
+ // --- Skills Section --- //
+ #skills {
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: 2rem 0;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .skills-container {
+    // border: 2px solid red;
+    width: 800px;
+
+    .skills-top {
+      margin-bottom: 2rem;
+
+      .st-header {
+        text-align: center;
+        padding: 2rem 0;
+        position: relative;
+
+        &:after {
+          content: '';
+          background: $primary-color;
+          height: 2px;
+          width: 50px;
+          position: absolute;
+          top: 80%;
+          left: 47%;
+        }
+      }
+
+      .st-body {
+        .st-items {
+          padding-right: .5rem;
+          text-align: center;
+  
+          p {
+            font-size: .8rem;
+            font-weight: 500;
+          }        
+        }
+
+        .st-wrapper-fe {
+          display: flex;
+          justify-content: center;
+           #htmlP {
+             color: #F16529;
+           }
+
+           #cssP {
+             color: #2565AE;
+           }
+
+           #jsP {
+             color: #E78625;
+           }
+
+           #designP {
+             color: #04887A;
+           }
+
+           #sassP{
+            color: #CD6799;
+           }
+
+           #bootstrapP {
+             color: #553C7B;
+           }
+
+           #jqueryP {
+            height: 30px;
+            width: 30px;
+           }
+        }
+
+        .st-wrapper-beo {
+          display: flex;
+          justify-content: center;
+         
+          #nodeP {
+            color: #3C873A;
+          }
+
+          #jsonP {
+            color: #FFAE41;
+            height: 31px;
+            width: 31px;
+          }
+
+          #phpP {
+            color: #474A8A;
+          }
+          
+          #wordpressP {
+            color: #00749C;
+          }
+
+          #gitP {
+            color: #333333;
+          }
+        }
+      }
+    }
+
+    .skills-process {
+      margin-bottom: 2rem;
+
+      .sp-header {
+        text-align: center;
+        padding: 2rem 0;
+        position: relative;
+
+        &:after {
+          content: '';
+          background: $primary-color;
+          height: 2px;
+          width: 50px;
+          position: absolute;
+          top: 80%;
+          left: 47%;
+        }
+      }
+
+      .sp-body {
+        display: flex;
+        justify-content: center;
+        .sp-items {
+          padding-right: 1.5rem;
+          text-align: center;
+  
+          p {
+            font-size: 1rem;
+            font-weight: 500;
+          }        
+        }
+
+        #discoverP {
+          color: #00508B;
+        }
+
+        #ideaP {
+          color: #FCD733 ;
+        }
+
+        #uxP {
+          color: #A70042 ;
+        }
+
+        #developP {
+          color: #18463B ;
+        }
+
+        #testP {
+          color: #0C841D ;
+        }
+
+        #launchP {
+          color: #A60004;
+        }
+
+      }
+    }
+  }
+
+  } // --- Skills Section --- //
+
+  // --- Projects Section --- //
+  #projects {
+    border: 2px solid red;
+    background-color: rgb(106, 197, 162);
+    padding: 2rem 0;
+    min-height: 50vh;
+
+    .project-1 {
+      border: 2px solid blue;
+      height: 200px;
+      width: 100%;
+      display: flex;
+
+      .project-head {
+        border: 5px solid orange;
+        height: 100%;
+        width: 30%;
+      }
+
+      .project-body {
+        border: 5px solid green;
+        height: 100%;
+        width: 100%;
+        .pb-wrapper {
+          border: 2px solid white;
+          display: inline-block;
+          vertical-align: middlegit;
+
+          .pb-top {
+            border: 2px solid blue;
+            height: 50px;
+            width: 100px;
+          }
+
+          .pb-bottom {
+            border: 2px solid red;
+            height: 50px;
+            width: 100%;
+          }
+
+          .pb-button {
+            border: 2px solid purple;
+            height: 50px;
+
+          }
+        }
+      }
+    }
+  } // --- End of Projects Section ---
+
+  // --- Contact Section --- //
+  #contact {
+    background-color: $secondary-color;   
+    color: $primary-color;   
+    padding: 2rem;
+    min-height: 50vh;      
+  
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      width: 1200px;
+      margin: auto;
+
+      // Left Input Div //
+      .input {
+        border-right: 2px solid $tertiary-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .input-container {
+          margin: 1rem 0;
+
+          .input-container-wrapper {
+            width: 650px;
+          }
+
+          .input-top-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          
+          #input-name,
+          #input-email {
+            width: 300px;
+
+            .top-item {
+              border: 1px solid $primary-color;
+              width: 100%;
+              height: 2rem;
+              padding: .5rem;
+              border-radius: 2px;
+            }
+
+          }
+
+          #input-message {
+
+            #bottom-item {
+              border: 1px solid $primary-color;
+              width: 100%;
+              height: 150px;
+              padding: .5rem;
+              border-radius: 2px;
+            }
+          }
+        }
+
+        .input-button {
+
+          #contact-button {
+            border: 2px solid $tertiary-color;
+            border-radius: 15px;
+            padding: .5rem 1rem;
+            font-size: 1rem;
+            color: $fourth-color;
+            background-color: $primary-color;
+
+            &:hover {
+              cursor: pointer;
+              @include easeOutBG();
+            }          
+          }
+        }
+      } // End of Left Input Div //
+
+      // Right Input Div //
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .info-container {
+          margin: 0 3rem;
+        }
+      }
+    }
+  } // --- End of Contact Section --- //
+
+   // --- footer --- //
+   footer {
+    background-color: #536878;
+    color: $primary-color;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .footer-container {
+      width: 1200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .footer-items {
+        text-align: center;
+        margin: .7rem;
+        cursor: pointer;
+        
+        &:hover {
+          color: lighten($color: $primary-color, $amount: 20);
+          @include easeOutFT();
+
+        }
+        p {
+          font-size: 1rem;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  } // --- End of Footer --- //
+    
+}
