@@ -6,7 +6,7 @@ main {
   flex-direction: column;
   margin-left: 200px;
 
-// --- Home Section --- //
+// --- ***Home Section*** --- //
 #home {
   color: $fourth-color;
   padding: 5rem;
@@ -53,67 +53,72 @@ main {
     z-index: 1;
 
     .button-action {
-      margin-right: .5rem;
-      padding: 1rem 1.5rem;
-      border: 2px solid $tertiary-color;
-      background: $primary-color;
-      border-radius: 2px;
-      color: $fourth-color;
-      font-size: 1rem;
-      font-weight: 500;
-      
-      &:hover {
-        cursor: pointer;
-        @include easeOutBG();
-      }
+      @include button(); 
     }
   }
 }  // --- End of Home Section --- //
 
 
-// --- About Section --- //
+// --- ***About Section*** --- //
 #about {
-  padding: 5rem;
-  height: 100vh;
-  background: $about-image;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
+  // border: 2px solid red;
+  background: paleturquoise;
+  padding: 2rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  position: relative;
+  align-items: center;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background: rgba(10, 35, 46, 0.8);
-  }
+  .about-container {
+    // border: 2px solid green;
+    background: paleturquoise;
+    border-radius: 5px;
+    height: 600px;
+    width: 1200px;
+    display: flex;
 
-  .about-description {
-    color: $fourth-color;
-    width: 900px;
-    position: absolute;
-    z-index: 1;
-    padding: 3rem;
-    border: 2px solid darken(grey, 40);
-    background: rgb(32, 43, 48);
+    .about-head {
+      // border: 2px solid red;
+      width: 600px;
+      border-radius: 20px 0 0 20px;
+      background: #FFF7D9;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-    p {
-      padding-bottom: .5rem;
+      .ah-image {
+        border: 2px solid black;
+        height: 300px;
+        width: 300px;
+      }    
     }
-  }
+ 
+
+    .about-description {
+      // border: 2px solid orange;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $fourth-color;
+      width: 600px;
+      z-index: 1;
+      padding: 3rem;
+      background: rgb(32, 43, 48);
+      border-radius: 0 20px 20px 0;
+
+      p {
+        padding-bottom: .5rem;
+      }    
+    }
+  } // end of about container //
 } // --- End of About Section --- //
 
- // --- Skills Section --- //
+
+ // --- ***Skills Section*** --- //
  #skills {
-  background-color: $secondary-color;
+  background-color: $fourth-color;
   color: $primary-color;
   padding: 2rem 0;
   min-height: 50vh;
@@ -122,215 +127,257 @@ main {
   align-items: center;
   justify-content: center;
 
-  .skills-container {
-    // border: 2px solid red;
-    width: 800px;
+    .skills-container {
+      // border: 2px solid red;
+      width: 800px;
 
-    .skills-top {
-      margin-bottom: 2rem;
+      .skills-top {
+        margin-bottom: 2rem;
 
-      .st-header {
-        text-align: center;
-        padding: 2rem 0;
-        position: relative;
-
-        &:after {
-          content: '';
-          background: $primary-color;
-          height: 2px;
-          width: 50px;
-          position: absolute;
-          top: 80%;
-          left: 47%;
-        }
-      }
-
-      .st-body {
-        .st-items {
-          padding-right: .5rem;
+        .st-header {
           text-align: center;
-  
-          p {
-            font-size: .8rem;
-            font-weight: 500;
-          }        
+          padding: 2rem 0;
+          position: relative;
+
+          &:after {
+            content: '';
+            background: $primary-color;
+            height: 2px;
+            width: 50px;
+            position: absolute;
+            top: 80%;
+            left: 47%;
+          }
         }
 
-        .st-wrapper-fe {
-          display: flex;
-          justify-content: center;
-           #htmlP {
-             color: #F16529;
-           }
-
-           #cssP {
-             color: #2565AE;
-           }
-
-           #jsP {
-             color: #E78625;
-           }
-
-           #designP {
-             color: #04887A;
-           }
-
-           #sassP{
-            color: #CD6799;
-           }
-
-           #bootstrapP {
-             color: #553C7B;
-           }
-
-           #jqueryP {
-            height: 30px;
-            width: 30px;
-           }
-        }
-
-        .st-wrapper-beo {
-          display: flex;
-          justify-content: center;
-         
-          #nodeP {
-            color: #3C873A;
+        .st-body {
+          .st-items {
+            padding-right: .5rem;
+            text-align: center;
+    
+            p {
+              font-size: .8rem;
+              font-weight: 500;
+            }        
           }
 
-          #jsonP {
-            color: #FFAE41;
-            height: 31px;
-            width: 31px;
+          .st-wrapper-fe {
+            display: flex;
+            justify-content: center;
+            #htmlP {
+              color: #F16529;
+            }
+
+            #cssP {
+              color: #2565AE;
+            }
+
+            #jsP {
+              color: #E78625;
+            }
+
+            #designP {
+              color: #04887A;
+            }
+
+            #sassP{
+              color: #CD6799;
+            }
+
+            #bootstrapP {
+              color: #553C7B;
+            }
+
+            #jqueryP {
+              height: 30px;
+              width: 30px;
+            }
           }
 
-          #phpP {
-            color: #474A8A;
-          }
+          .st-wrapper-beo {
+            display: flex;
+            justify-content: center;
           
-          #wordpressP {
-            color: #00749C;
-          }
+            #nodeP {
+              color: #3C873A;
+            }
 
-          #gitP {
-            color: #333333;
+            #jsonP {
+              color: #FFAE41;
+              height: 31px;
+              width: 31px;
+            }
+
+            #phpP {
+              color: #474A8A;
+            }
+            
+            #wordpressP {
+              color: #00749C;
+            }
+
+            #gitP {
+              color: #333333;
+            }
           }
         }
       }
-    }
 
-    .skills-process {
-      margin-bottom: 2rem;
+      .skills-process {
+        margin-bottom: 2rem;
 
-      .sp-header {
-        text-align: center;
-        padding: 2rem 0;
-        position: relative;
-
-        &:after {
-          content: '';
-          background: $primary-color;
-          height: 2px;
-          width: 50px;
-          position: absolute;
-          top: 80%;
-          left: 47%;
-        }
-      }
-
-      .sp-body {
-        display: flex;
-        justify-content: center;
-        .sp-items {
-          padding-right: 1.5rem;
+        .sp-header {
           text-align: center;
-  
-          p {
-            font-size: 1rem;
-            font-weight: 500;
-          }        
+          padding: 2rem 0;
+          position: relative;
+
+          &:after {
+            content: '';
+            background: $primary-color;
+            height: 2px;
+            width: 50px;
+            position: absolute;
+            top: 80%;
+            left: 47%;
+          }
         }
 
-        #discoverP {
-          color: #00508B;
-        }
+        .sp-body {
+          display: flex;
+          justify-content: center;
+          .sp-items {
+            padding-right: 1.5rem;
+            text-align: center;
+    
+            p {
+              font-size: 1rem;
+              font-weight: 500;
+            }        
+          }
 
-        #ideaP {
-          color: #FCD733 ;
-        }
+          #discoverP {
+            color: #00508B;
+          }
 
-        #uxP {
-          color: #A70042 ;
-        }
+          #ideaP {
+            color: #FCD733 ;
+          }
 
-        #developP {
-          color: #18463B ;
-        }
+          #uxP {
+            color: #A70042 ;
+          }
 
-        #testP {
-          color: #0C841D ;
-        }
+          #developP {
+            color: #18463B ;
+          }
 
-        #launchP {
-          color: #A60004;
-        }
+          #testP {
+            color: #0C841D ;
+          }
 
+          #launchP {
+            color: #A60004;
+          }
+
+        }
       }
     }
-  }
+  } // --- End of Skills Section --- //
 
-  } // --- Skills Section --- //
 
-  // --- Projects Section --- //
+  // --- ***Projects Section*** --- //
   #projects {
-    border: 2px solid red;
-    background-color: rgb(106, 197, 162);
-    padding: 2rem 0;
+    // border: 2px solid red;
+    background: paleturquoise;
+    // padding: 2rem 0;
     min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .project-1 {
-      border: 2px solid blue;
-      height: 200px;
+    .projects-container {
+      // border: 2px solid green;
+    }
+
+    .project-1,
+    .project-2 {
+      // border: 2px solid blue;
+      height: 400px;
       width: 100%;
       display: flex;
+      padding: 3rem;
 
       .project-head {
-        border: 5px solid orange;
+        border: 2px solid black;
         height: 100%;
-        width: 30%;
+        width: 900px;
+        background-image: url('../img/fangtasticbrows.jpg');
+        background-size: cover;
+        box-shadow: 2px 5px 15px;
       }
 
       .project-body {
-        border: 5px solid green;
+        // border: 5px solid green;
         height: 100%;
         width: 100%;
+        color: $primary-color;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         .pb-wrapper {
-          border: 2px solid white;
-          display: inline-block;
-          vertical-align: middlegit;
+          // border: 2px solid white;
+          display: flex;
+          flex-direction: column;
+          height: 200px;
+          width: 80%;
+    
 
           .pb-top {
-            border: 2px solid blue;
-            height: 50px;
-            width: 100px;
+            // border: 2px solid blue;
+            // height: 50%;
+            // width: 100%;
           }
 
           .pb-bottom {
-            border: 2px solid red;
-            height: 50px;
+            // border: 2px solid red;
+            height: 50%;
             width: 100%;
           }
 
           .pb-button {
-            border: 2px solid purple;
-            height: 50px;
+            // border: 2px solid purple;
+            height: 100%;
+            width: 100%;
+
+            .button-action {
+              @include button(); 
+            }
 
           }
         }
       }
     }
+
+    .project-1 {
+      background-color: #6E90B5;
+    }
+
+    .project-2 {
+      background-color: #FFF7D9;
+
+      .project-head {
+        // border: 5px solid orange;
+        height: 100%;
+        width: 900px;
+        background-image: url('../img/4runner.jpg');
+        background-size: cover;
+      }
+    }
   } // --- End of Projects Section ---
 
-  // --- Contact Section --- //
+  // --- ***Contact Section*** --- //
   #contact {
     background-color: $secondary-color;   
     color: $primary-color;   
@@ -420,9 +467,10 @@ main {
     }
   } // --- End of Contact Section --- //
 
-   // --- footer --- //
+
+   // --- ***Footer Section***--- //
    footer {
-    background-color: #536878;
+    background-color: #FFDAB9;
     color: $primary-color;
     height: 150px;
     width: 100%;

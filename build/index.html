@@ -49,32 +49,46 @@
   <!-- Main Content -->
   <main>
 
-    <!-- ***Home*** -->
+    <!-- ***Home Section*** -->
     <section id="home">
       <div class="home-title">
         <h1>Tou Toua Yang</h1>
         <p>Front End Developer</p>
         <div class="cta">
-            <button class="button button-action">Check out my work</button>
-            <button class="button button-action">Let's work together</button>
+            <button class="button button-action">
+              <a href="#projects" class="nav-link">
+              Check out my work
+              </a>
+            </button>
+            <button class="button button-action">
+              <a href="#contact" class="nav-link">
+              Let's work together
+              </a></button>
           </div>
       </div>
-    </section>
+    </section> <!-- End of Home Section -->
 
-    <!-- ***About me*** -->
+
+    <!-- ***About Section*** -->
     <section id="about">
-      <div class="about-description">
-        <h2>Front End Developer w/ WordPress Experience</h2>
-        <h3>Results oriented and an agile collaborator</h3>
-        <p>I'm a motivated self-taught developer looking to build relationships, continue developing my skillset and solve real problems for clients and businesses.</p>
-        <h3>My Motto</h3>
-        <p>Openness to constructive feedback + yearning drive for personal & intellectual growth <br> = personal fulfillment & better developmental progress.</p>
-        <p>Mutual respect + collaboration = an efficient and healthy team.</p>
-        <p>Learn, share, teach. That's how we become better - individually & collectively.</p>
-        <h3>Behind The Scenes</h3>
-        <p>Exploring the outdoors, watching Netflix (TWD, Black Mirror, etc.), playing Catan with family <br> and friends, fixing cars, & other regular people stuff.</p>     
-      </div>  
-    </section>
+      <div class="about-container">
+        <div class="about-head">
+          <img class="ah-image" src="img/about.jpg" alt="">
+          <h2>Front End Developer</h2>
+          <h3>Results oriented and an agile collaborator</h3>
+          <p>I'm a motivated self-taught developer looking to build relationships, continue developing my skillset and solve real problems for clients and businesses.</p>
+        </div>
+        <div class="about-description">
+          <h3>My Motto</h3>
+          <p>Openness to constructive feedback + yearning drive for personal & intellectual growth = personal fulfillment & better developmental progress.</p>
+          <p>Mutual respect + collaboration = an efficient and healthy team.</p>
+          <p>Learn, share, teach. That's how we become better - individually & collectively.</p>
+          <h3>Behind The Scenes</h3>
+          <p>Exploring the outdoors, watching Netflix (TWD, Black Mirror, etc.), playing Catan with family and friends, fixing cars, & other regular people stuff.</p>     
+        </div>  
+      </div>
+    </section> <!-- End of About Section -->
+
 
     <!-- ***Skills*** -->
     <section id="skills">
@@ -172,21 +186,60 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> <!-- End of Skills -->
 
-    <!-- ***Projects*** -->
+
+    <!-- ***Projects Section*** -->
     <section id="projects">
-      <div class="project-1">
-        <div class="project-head"></div>
-        <div class="project-body">
-          <div class="pb-wrapper">
-            <div class="pb-top"></div>
-            <div class="pb-bottom"></div>
-            <div class="pb-button"></div>
+
+      <!-- project container -->
+      <div class="projects-container">
+
+        <div class="project-1">
+          <div class="project-head"></div>
+          <div class="project-body">
+            <div class="pb-wrapper">
+              <div class="pb-top">
+                <h2>Fangtastic Brows LLC</h2>
+              </div>
+              <div class="pb-bottom"><p>
+                A website built for a local small business.</p>
+              </div>
+              <div class="pb-button">
+                <button class="button-action"> 
+                  <a href="https://fangtasticbrows.netlify.com" target="_blank">Learn more</a>
+                </button>  
+                <button class="button-action"> 
+                  <a href="https://github.com/gittyang/Fangtastic-Brows" target="_blank">View Github</a></button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+
+        <div class="project-2">
+          <div class="project-head"></div>
+          <div class="project-body">
+            <div class="pb-wrapper">
+              <div class="pb-top">
+                <h2>Toyota 4Runner</h2>
+              </div>
+              <div class="pb-bottom"><p>
+                Simple landing page featuring the Toyota 4Runner.</p>
+              </div>
+              <div class="pb-button">
+                <button class="button-action"> 
+                  <a href="https://4runner.netlify.com" target="_blank">Learn more</a>
+                </button>  
+                <button class="button-action"> 
+                  <a href="https://github.com/gittyang/Toyota-4runner" target="_blank">View Github</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div><!-- end of project container -->
+    </section><!-- End of Projects Section -->
+
 
     <!-- ***Contact Me*** -->
     <section id="contact">
@@ -243,7 +296,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> <!-- Contact Me -->
 
     <!-- ***Footer*** -->
     <footer>

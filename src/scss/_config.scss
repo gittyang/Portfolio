@@ -1,7 +1,7 @@
 // nav color
-$primary-color: #080738;
+$primary-color: #003263;
 // div color
-$secondary-color: #D0D0D0;
+$secondary-color: #8DDBCF;
 // outline
 $tertiary-color: #8B000B;
 // Text 1
@@ -51,7 +51,6 @@ p {
 }
 
 a {
-  color: $secondary-color;
   text-decoration: none;
   list-style-type: none;
 }
@@ -69,4 +68,24 @@ a {
 @mixin easeOutNAV() {
   transition: all .2s ease-out;
   color: $secondary-color;
+}
+
+@mixin button() {
+  margin-right: .5rem;
+  padding: 1rem 1.5rem;
+  border: 2px solid $tertiary-color;
+  background: $primary-color;
+  border-radius: 2px;
+  color: $fourth-color;
+  font-size: 1rem;
+  font-weight: 500;
+
+  a {
+    color: $fourth-color;
+  }
+  
+  &:hover {
+    cursor: pointer;
+    @include easeOutBG();
+  }
 }
