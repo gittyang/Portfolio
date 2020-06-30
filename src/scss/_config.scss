@@ -1,13 +1,17 @@
 // nav color
-$primary-color: #003263;
+$primary-color: #0d1d2c;
 // div color
-$secondary-color: #8DDBCF;
+$secondary-color: #d4d8e2;
 // outline
-$tertiary-color: #8B000B;
+$tertiary-color: #ffffff;
 // Text 1
 $fourth-color: white;
 // Text 2
 $fifth-color: #080738;
+// Alt Yellow
+$alt-yellow: #FFF7D9;
+// alt-blue
+$alt-blue: #6E90B5;
 
 $home-image: url(../img/home.jpg);
 $about-image: url(../img/canoe2.jpg);
@@ -22,7 +26,7 @@ $background-opacity: 0.9;
 body, input, textarea, button {
   line-height: 100%;
   margin: 0;
-  font-family: 'Baloo Thambi 2', cursive;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
@@ -45,7 +49,7 @@ h3 {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5rem;
 }
@@ -55,18 +59,23 @@ a {
   list-style-type: none;
 }
 
+.container {
+  max-width: 1200px;
+}
+
 @mixin easeOutBG() {
-  transition: all .2s ease-out;
   background-color: $tertiary-color;
+  border: 2px solid $primary-color;
+  color: $primary-color;
 }
 
 @mixin easeOutFT() {
-  transition: all .2s ease-out;
+  transition: all .2s ease-in-out;
   color: $tertiary-color;
 }
 
 @mixin easeOutNAV() {
-  transition: all .2s ease-out;
+  transition: all .2s ease-in-out;
   color: $secondary-color;
 }
 
@@ -75,10 +84,12 @@ a {
   padding: 1rem 1.5rem;
   border: 2px solid $tertiary-color;
   background: $primary-color;
-  border-radius: 2px;
-  color: $fourth-color;
+  color: white;
+  border-radius: 5px;
   font-size: 1rem;
   font-weight: 500;
+  transition: all .2s ease-in-out; 
+
 
   a {
     color: $fourth-color;
@@ -89,3 +100,4 @@ a {
     @include easeOutBG();
   }
 }
+

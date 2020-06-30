@@ -52,7 +52,7 @@ main {
     display: flex;
     z-index: 1;
 
-    .button-action {
+    a {
       @include button(); 
     }
   }
@@ -62,26 +62,24 @@ main {
 // --- ***About Section*** --- //
 #about {
   // border: 2px solid red;
-  background: paleturquoise;
+  background: $secondary-color;
   padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .about-container {
+  .about-wrapper {
     // border: 2px solid green;
-    background: paleturquoise;
+    background: $secondary-color;
     border-radius: 5px;
-    height: 600px;
-    width: 1200px;
+    height: 550px;
     display: flex;
 
     .about-head {
       // border: 2px solid red;
-      width: 600px;
+      width: 35%;
       border-radius: 20px 0 0 20px;
-      background: #FFF7D9;
-      padding: 3rem;
+      background: $alt-yellow;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -100,17 +98,22 @@ main {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
       color: $fourth-color;
-      width: 600px;
+      width: 65%;
       z-index: 1;
-      padding: 3rem;
-      background: rgb(32, 43, 48);
+      padding: 2rem;
+      background: $primary-color;
       border-radius: 0 20px 20px 0;
 
       p {
+        // border: 2px solid green;
         padding-bottom: .5rem;
-      }    
+      } 
+      
+      h3 {
+        // border: 2px solid orangered;
+        margin-top: 1rem;
+      }
     }
   } // end of about container //
 } // --- End of About Section --- //
@@ -256,27 +259,46 @@ main {
           }
 
           #discoverP {
-            color: #00508B;
+
+            &:hover {
+              transition: all .1s ease-in-out;
+              color: #00508B;
+            }
           }
 
           #ideaP {
-            color: #FCD733 ;
+            &:hover{
+              transition: all .1s ease-in-out;
+              color: #FCD733 ;
+            }
           }
 
           #uxP {
-            color: #A70042 ;
+            &:hover{
+              transition: all .1s ease-in-out;
+              color: #A70042 ;
+            }
           }
 
           #developP {
-            color: #18463B ;
+            &:hover{
+              transition: all .1s ease-in-out;
+              color: #18463B ;
+            }
           }
 
           #testP {
-            color: #0C841D ;
+            &:hover{
+              transition: all .1s ease-in-out;
+              color: #0C841D ;
+            }
           }
 
           #launchP {
-            color: #A60004;
+            &:hover{
+              transition: all .1s ease-in-out;
+              color: #A60004;
+            }
           }
 
         }
@@ -288,194 +310,177 @@ main {
   // --- ***Projects Section*** --- //
   #projects {
     // border: 2px solid red;
-    background: paleturquoise;
+    background: $secondary-color;
     // padding: 2rem 0;
-    min-height: 50vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     .projects-container {
       // border: 2px solid green;
-    }
-
-    .project-1,
-    .project-2 {
-      // border: 2px solid blue;
-      height: 400px;
+      // width: 1200px;
       width: 100%;
-      display: flex;
-      padding: 3rem;
+      border-radius: 5px;
 
-      .project-head {
-        border: 2px solid black;
-        height: 100%;
-        width: 900px;
-        background-image: url('../img/fangtasticbrows.jpg');
-        background-size: cover;
-        box-shadow: 2px 5px 15px;
-      }
-
-      .project-body {
-        // border: 5px solid green;
-        height: 100%;
-        width: 100%;
-        color: $primary-color;
-
+      .project-1,
+      .project-2,
+      .project-3 {
+        // border: 2px solid blue;
         display: flex;
         justify-content: center;
-        align-items: center;
-
-        .pb-wrapper {
-          // border: 2px solid white;
+  
+  
+        .project-item-wrap {
+          // border: 2px solid blue;
+          height: 400px;
           display: flex;
-          flex-direction: column;
-          height: 200px;
-          width: 80%;
+          padding: 3rem;
+          width: 1200px;
+
+          .project-head {
+            border: 2px solid black;
+            height: 100%;
+            width: 1000px;
+            box-shadow: 2px 5px 15px;
+          }
     
-
-          .pb-top {
-            // border: 2px solid blue;
-            // height: 50%;
-            // width: 100%;
-          }
-
-          .pb-bottom {
-            // border: 2px solid red;
-            height: 50%;
-            width: 100%;
-          }
-
-          .pb-button {
-            // border: 2px solid purple;
+          .project-body {
+            // border: 5px solid green;
             height: 100%;
             width: 100%;
+            color: $primary-color;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            .pb-wrapper {
+              // border: 2px solid red;
+              display: flex;
+              flex-direction: column;
+              height: 200px;
+              // width: 100%;
+              }
+    
+              .pb-button {
+                // border: 2px solid purple;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                // justify-content: center;
+                align-items: center;
+    
+                a {
+                  // border: 2px solid red;
+                  @include button(); 
 
-            .button-action {
-              @include button(); 
+                }
+    
+              }
             }
-
           }
         }
       }
-    }
+  
+      .project-1 {
+        background-color: $alt-blue;
 
-    .project-1 {
-      background-color: #6E90B5;
-    }
+        .project-head {
+          background-image: url('../img/gymfitness.jpg'); 
+          background-size: cover;
+        }
+      }
+  
+      .project-2 {
+        background-color: $alt-yellow;
+  
+        .project-head {
+          // border: 5px solid orange;
+          background-image: url('../img/fangtasticbrows.jpg');
+          background-size: cover;
+        }
+      }
 
-    .project-2 {
-      background-color: #FFF7D9;
-
-      .project-head {
-        // border: 5px solid orange;
-        height: 100%;
-        width: 900px;
-        background-image: url('../img/4runner.jpg');
-        background-size: cover;
+      .project-3 {
+        background-color: $alt-blue;
+  
+        .project-head {
+          // border: 5px solid orange;
+          background-image: url('../img/4runner.jpg');
+          background-size: cover;
+        }
       }
     }
   } // --- End of Projects Section ---
 
+
   // --- ***Contact Section*** --- //
   #contact {
-    background-color: $secondary-color;   
+    // border: 2px solid blue;
+    background-color: white;   
     color: $primary-color;   
-    padding: 2rem;
-    min-height: 50vh;      
+    // padding: 2rem;
+    min-height: 80vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+    .contact-top {
+      // border: 2px solid red;
+      display: flex;
+      justify-content: center;
+      // flex-direction: column;
+      // align-items: center;
+      width: 100%;
+      height: 500px;
+
+      .contact-text {
+        // border: 2px solid cyan;
+        // width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+        // padding: 5rem 0;
+
+        h2 {
+          // border: 2px solid green;
+          margin-bottom: 2rem;
+          display: flex;
+          justify-content: center;
+        }
+
+        p {
+          // border: 2px solid red;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .contact-svg {
+        // border: 2px solid blue;
+        width: 50%;
+        display: flex;
+        justify-content: center;
   
-    .contact-wrapper {
-      display: grid;
-      grid-template-columns: 60% 40%;
-      width: 1200px;
-      margin: auto;
-
-      // Left Input Div //
-      .input {
-        border-right: 2px solid $tertiary-color;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        .input-container {
-          margin: 1rem 0;
-
-          .input-container-wrapper {
-            width: 650px;
-          }
-
-          .input-top-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-          }
-          
-          #input-name,
-          #input-email {
-            width: 300px;
-
-            .top-item {
-              border: 1px solid $primary-color;
-              width: 100%;
-              height: 2rem;
-              padding: .5rem;
-              border-radius: 2px;
-            }
-
-          }
-
-          #input-message {
-
-            #bottom-item {
-              border: 1px solid $primary-color;
-              width: 100%;
-              height: 150px;
-              padding: .5rem;
-              border-radius: 2px;
-            }
-          }
-        }
-
-        .input-button {
-
-          #contact-button {
-            border: 2px solid $tertiary-color;
-            border-radius: 15px;
-            padding: .5rem 1rem;
-            font-size: 1rem;
-            color: $fourth-color;
-            background-color: $primary-color;
-
-            &:hover {
-              cursor: pointer;
-              @include easeOutBG();
-            }          
-          }
-        }
-      } // End of Left Input Div //
-
-      // Right Input Div //
-      .info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        .info-container {
-          margin: 0 3rem;
+        img {
+          // border: 2px solid green;
+          width: 80%;
         }
       }
     }
+
   } // --- End of Contact Section --- //
 
 
    // --- ***Footer Section***--- //
-   footer {
-    background-color: #FFDAB9;
-    color: $primary-color;
-    height: 150px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  footer {
+  background-color: $secondary-color;
+  color: $primary-color;
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
     .footer-container {
       width: 1200px;
@@ -487,19 +492,18 @@ main {
         text-align: center;
         margin: .7rem;
         cursor: pointer;
-        
-        &:hover {
-          color: lighten($color: $primary-color, $amount: 20);
-          @include easeOutFT();
 
+        a{
+          color: $primary-color;
+
+          &:hover {
+            color: lighten($color: $primary-color, $amount: 20);
+            @include easeOutFT();
+          }
         }
-        p {
-          font-size: 1rem;
-          padding: 0;
-          margin: 0;
-        }
+
       }
     }
-  } // --- End of Footer --- //
+  }
+ // --- End of Footer --- //
     
-}

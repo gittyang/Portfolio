@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">  <link rel="stylesheet" href="css/main.css">
   <title>Document</title>
 </head>
 <body>
@@ -44,7 +43,7 @@
 
       </ul>
     </nav>
-  </header>
+  </header> 
 
   <!-- Main Content -->
   <main>
@@ -55,15 +54,12 @@
         <h1>Tou Toua Yang</h1>
         <p>Front End Developer</p>
         <div class="cta">
-            <button class="button button-action">
-              <a href="#projects" class="nav-link">
-              Check out my work
-              </a>
-            </button>
-            <button class="button button-action">
-              <a href="#contact" class="nav-link">
-              Let's work together
-              </a></button>
+          <a href="#projects" class="nav-link">
+          Check out my work
+          </a>
+          <a href="#contact" class="nav-link">
+          Let's work together
+          </a>
           </div>
       </div>
     </section> <!-- End of Home Section -->
@@ -71,20 +67,20 @@
 
     <!-- ***About Section*** -->
     <section id="about">
-      <div class="about-container">
+      <div class="about-wrapper container">
         <div class="about-head">
           <img class="ah-image" src="img/about.jpg" alt="">
+        </div>
+        <div class="about-description">
           <h2>Front End Developer</h2>
           <h3>Results oriented and an agile collaborator</h3>
           <p>I'm a motivated self-taught developer looking to build relationships, continue developing my skillset and solve real problems for clients and businesses.</p>
-        </div>
-        <div class="about-description">
           <h3>My Motto</h3>
-          <p>Openness to constructive feedback + yearning drive for personal & intellectual growth = personal fulfillment & better developmental progress.</p>
+          <p>Openness to constructive feedback + desire for growth = <br> personal fulfillment & better developmental progress.</p>
           <p>Mutual respect + collaboration = an efficient and healthy team.</p>
           <p>Learn, share, teach. That's how we become better - individually & collectively.</p>
-          <h3>Behind The Scenes</h3>
-          <p>Exploring the outdoors, watching Netflix (TWD, Black Mirror, etc.), playing Catan with family and friends, fixing cars, & other regular people stuff.</p>     
+          <h3>Personal Interests</h3>
+          <p>Exploring the outdoors, Netflix (TWD, Black Mirror, etc.), Catan, volleyball, COD Warzone, etc.</p>     
         </div>  
       </div>
     </section> <!-- End of About Section -->
@@ -194,46 +190,85 @@
 
       <!-- project container -->
       <div class="projects-container">
-
         <div class="project-1">
-          <div class="project-head"></div>
-          <div class="project-body">
-            <div class="pb-wrapper">
-              <div class="pb-top">
-                <h2>Fangtastic Brows LLC</h2>
-              </div>
-              <div class="pb-bottom"><p>
-                A website built for a local small business.</p>
-              </div>
-              <div class="pb-button">
-                <button class="button-action"> 
-                  <a href="https://fangtasticbrows.netlify.com" target="_blank">Learn more</a>
-                </button>  
-                <button class="button-action"> 
-                  <a href="https://github.com/gittyang/Fangtastic-Brows" target="_blank">View Github</a></button>
+          <div class="project-item-wrap">
+
+            <div class="project-head"></div>
+
+            <div class="project-body">
+              <div class="pb-wrapper">
+                <div class="pb-top">
+                  <h2>GymFitness</h2>
+                </div>
+                <div class="pb-bottom"><p>
+                  A fully dynamic website built on WordPress CMS.</p>
+                </div>
+                <div class="pb-button">
+                  <a href="https://dev-gymfitness.pantheonsite.io/" target="_blank">
+                    View Website
+                  </a>
+                  <a href="https://github.com/gittyang/Gym-WordPress-Theme" target="_blank">
+                    View Github
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <div class="project-2">
-          <div class="project-head"></div>
-          <div class="project-body">
-            <div class="pb-wrapper">
-              <div class="pb-top">
-                <h2>Toyota 4Runner</h2>
-              </div>
-              <div class="pb-bottom"><p>
-                Simple landing page featuring the Toyota 4Runner.</p>
-              </div>
-              <div class="pb-button">
-                <button class="button-action"> 
-                  <a href="https://4runner.netlify.com" target="_blank">Learn more</a>
-                </button>  
-                <button class="button-action"> 
-                  <a href="https://github.com/gittyang/Toyota-4runner" target="_blank">View Github</a></button>
+          <div class="project-item-wrap">
+
+            <div class="project-head"></div>
+
+            <div class="project-body">
+              <div class="pb-wrapper">
+                <div class="pb-top">
+                  <h2>Fangtastic Brows LLC</h2>
+                </div>
+                <div class="pb-bottom"><p>
+                  A website built for a local small business.</p>
+                </div>
+                <div class="pb-button">
+                    <a href="https://fangtasticbrows.netlify.com" target="_blank">
+                      View Website
+                    </a>
+                    <a href="https://github.com/gittyang/Fangtastic-Brows" target="_blank">
+                      View Github
+                    </a>
+                </div>
               </div>
             </div>
+
+          </div>
+        </div>
+
+
+        <div class="project-3">
+          <div class="project-item-wrap">
+
+            <div class="project-head">
+            </div>
+
+            <div class="project-body">
+              <div class="pb-wrapper">
+                <div class="pb-top">
+                  <h2>Toyota 4Runner</h2>
+                </div>
+                <div class="pb-bottom"><p>
+                  Simple landing page featuring the Toyota 4Runner.</p>
+                </div>
+                <div class="pb-button">
+                    <a href="https://4runner.netlify.com" target="_blank">
+                      View Website
+                    </a> 
+                    <a href="https://github.com/gittyang/Toyota-4runner" target="_blank">
+                      View Github
+                    </a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
         
@@ -243,82 +278,77 @@
 
     <!-- ***Contact Me*** -->
     <section id="contact">
-      <div class="contact-wrapper">
+      <div class="contact-top container">
+        <div class="contact-text">
+          <h2>
+            Contact
+          </h2>
 
-        <div class="input">
-          <h2 id="contact-title">Interested in my work? Let's talk!</h2>
-          <div class="input-container">
-            <div class="input-container-wrapper">
-              <div class="input-top-container">
-                <div id="input-name">
-                  <h3>Name</h3>
-                  <input type="text" class="top-item">
-                </div>
-                <div id="input-email">
-                  <h3>Email</h3>
-                  <input type="email" class="top-item">
-                </div>
-              </div>
+          <p>
+            Please feel free to connect with me on LinkedIn:
+          </p>
+          <a href="https://www.linkedin.com/in/toutouayang/" target="_blank">
+            <b>linkedin.com/toutouayang</b>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
 
-              <div id="input-message">
-                <h3>Message</h3>
-                <textarea type="text" id="bottom-item"></textarea>
-              </div>
-            </div>
-          </div>
-          <div class="input-button">
-            <button id="contact-button">Send Message</button>            
-          </div>
+          <br>
+          <br>
+          <p>
+            You can also contact me at:
+          </p>
+          <a href="mailto:ttyang251@gmail.com" target="_blank">
+            <b>ttyang251@gmail.com</b>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
 
+          <br>
+          <br>
+          <br>
+
+          <h3>
+            Hope to hear from you!
+          </h3>
         </div>
 
-        <div class="info">
-          <div class="info-container">
-            <div class="info-items">
-              <h2>Location</h2>
-              <p>Twin cities Metro Area, MN<br>USA</p>
-            </div>
-
-            <div class="contact-item">
-              <h2>Email</h2>
-              <p>ttyang251@gmail.com</p>
-            </div>
-
-            <div class="contact-item">
-              <h2>GitHub</h2>
-              <p>https://github.com/gittyang</p>
-            </div>
-
-            <div class="contact-item">
-              <h2>LinkedIn</h2>
-              <p>linkedin.com/toutouayang</p>
-            </div>
-          </div>
+        <div class="contact-svg">
+          <img src="img/contact.svg" alt="">
         </div>
       </div>
+
     </section> <!-- Contact Me -->
 
     <!-- ***Footer*** -->
     <footer>
       <div class="footer-container">
+
         <div class="footer-items">
-          <i class="fab fa-git-alt fa-3x">
-            <a href="#"></a>
-          </i>
-          <p>Github</p>
+          <a href="https://github.com/gittyang" target="_blank">
+            <i class="fab fa-git-alt fa-3x"></i>
+            <p>
+              Github
+            </p>
+          </a>
         </div>
+
         <div class="footer-items">
-          <i class="fab fa-linkedin fa-3x">
-            <a href="#"></a>
-          </i>
-          <p>Linkedin</p>
+          <a href="https://www.linkedin.com/in/toutouayang/" target="_blank">
+            <i class="fab fa-linkedin fa-3x"></i>
+            <p>
+              LinkedIn
+            </p>
+          </a>
         </div>
+
         <div class="footer-items">
-          <i class="far fa-file-alt fa-3x">
-            <a href="#"></a>
-          </i>
-          <p>Resume</p>
+          <a href="img/Tou Toua Yang Resume.pdf" target="_blank">
+            <i class="far fa-file-alt fa-3x"></i> 
+            <p>
+              Resume
+            </p>
+          </a>
         </div>
+
       </div>
     </footer>
 
