@@ -1,3 +1,6 @@
+.hide {
+  display: none; }
+
 * {
   margin: 0;
   padding: 0;
@@ -66,12 +69,68 @@ header {
       background: white;
       margin: 1rem 2rem;
       padding: 0rem 0rem 2px 8rem; }
+  @media screen and (max-width: 1200px) {
+    header {
+      width: 175px; } }
+  @media screen and (max-width: 992px) {
+    header {
+      width: 150px; }
+      header .menu-nav {
+        font-size: 1rem;
+        font-weight: 500; }
+        header .menu-nav .nav-item {
+          padding: 2rem 0rem 0rem 8rem;
+          margin-right: 1rem; }
+        header .menu-nav .nav-link {
+          white-space: nowrap;
+          color: white; }
+        header .menu-nav .nav-link:hover {
+          transition: all .2s ease-in-out;
+          color: #d4d8e2; }
+        header .menu-nav .nav-item-line {
+          background: white;
+          margin: 1rem 1rem;
+          padding: 0rem 0rem 2px 7rem; } }
+  @media screen and (max-width: 768px) {
+    header {
+      width: 120px; }
+      header .menu-nav {
+        font-size: .9rem;
+        font-weight: 500; }
+        header .menu-nav .nav-item {
+          padding: 2rem 0rem 0rem 8rem;
+          margin-right: 1rem; }
+        header .menu-nav .nav-link {
+          white-space: nowrap;
+          color: white; }
+        header .menu-nav .nav-link:hover {
+          transition: all .2s ease-in-out;
+          color: #d4d8e2; }
+        header .menu-nav .nav-item-line {
+          background: white;
+          margin: 1rem 1rem;
+          padding: 0rem 0rem 2px 6rem; } }
+  @media screen and (max-width: 576px) {
+    header {
+      display: none; } }
 
-main {
+body main {
   display: flex;
   flex-direction: column;
   margin-left: 200px; }
-  main #home {
+  @media screen and (max-width: 1200px) {
+    body main {
+      margin-left: 175px; } }
+  @media screen and (max-width: 992px) {
+    body main {
+      margin-left: 150px; } }
+  @media screen and (max-width: 768px) {
+    body main {
+      margin-left: 120px; } }
+  @media screen and (max-width: 576px) {
+    body main {
+      margin-left: 0; } }
+  body main #home {
     color: white;
     padding: 5rem;
     height: 100vh;
@@ -84,7 +143,7 @@ main {
     align-items: center;
     justify-content: center;
     position: relative; }
-    main #home::after {
+    body main #home::after {
       content: "";
       position: absolute;
       top: 0;
@@ -93,20 +152,20 @@ main {
       height: 100%;
       z-index: 0;
       background: rgba(0, 0, 0, 0.8); }
-    main #home .home-title {
+    body main #home .home-title {
       z-index: 1;
       display: flex;
       flex-direction: column; }
-      main #home .home-title h1 {
+      body main #home .home-title h1 {
         font-size: 4rem;
         margin-bottom: .5rem; }
-      main #home .home-title p {
+      body main #home .home-title p {
         margin-bottom: 1.5rem;
         margin-left: .1rem; }
-    main #home .cta {
+    body main #home .cta {
       display: flex;
       z-index: 1; }
-      main #home .cta a {
+      body main #home .cta a {
         margin-right: .5rem;
         padding: 1rem 1.5rem;
         border: 2px solid #ffffff;
@@ -116,24 +175,37 @@ main {
         font-size: 1rem;
         font-weight: 500;
         transition: all .2s ease-in-out; }
-        main #home .cta a a {
+        body main #home .cta a a {
           color: white; }
-        main #home .cta a:hover {
+        body main #home .cta a:hover {
           cursor: pointer;
           background-color: #ffffff;
           border: 2px solid #0d1d2c;
           color: #0d1d2c; }
-  main #about {
+    @media screen and (max-width: 992px) {
+      body main #home .home-title h1 {
+        font-size: 3.5rem; }
+      body main #home .cta a {
+        padding: .75rem .75rem; } }
+    @media screen and (max-width: 768px) {
+      body main #home .home-title h1 {
+        font-size: 2rem; }
+      body main #home .home-title p {
+        font-size: 1rem; }
+      body main #home .cta a {
+        font-size: .8rem;
+        padding: .5rem; } }
+  body main #about {
     background: #d4d8e2;
     padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center; }
-    main #about .about-wrapper {
+    body main #about .about-wrapper {
       background: #d4d8e2;
       border-radius: 5px;
       display: flex; }
-      main #about .about-wrapper .about-head {
+      body main #about .about-wrapper .about-head {
         width: 35%;
         border-radius: 20px 0 0 20px;
         background: #FFF7D9;
@@ -141,12 +213,12 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center; }
-        main #about .about-wrapper .about-head .ah-image {
+        body main #about .about-wrapper .about-head .ah-image {
           border: 2px solid #0d1d2c;
           border-radius: 50%;
           height: 300px;
           width: 300px; }
-      main #about .about-wrapper .about-description {
+      body main #about .about-wrapper .about-description {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -156,93 +228,132 @@ main {
         padding: 2rem;
         background: #0d1d2c;
         border-radius: 0 20px 20px 0; }
-        main #about .about-wrapper .about-description p {
+        body main #about .about-wrapper .about-description p {
           padding-bottom: .5rem; }
-        main #about .about-wrapper .about-description h3 {
+        body main #about .about-wrapper .about-description h3 {
           margin-top: 1rem; }
     @media screen and (max-width: 1440px) {
-      main #about .about-wrapper {
+      body main #about .about-wrapper {
         height: 500px; }
-        main #about .about-wrapper .about-head .ah-image {
+        body main #about .about-wrapper .about-head .ah-image {
           height: 275px;
           width: 275px; }
-        main #about .about-wrapper .about-description {
+        body main #about .about-wrapper .about-description {
           width: 80%;
           padding: 1.5rem; }
-          main #about .about-wrapper .about-description h2 {
+          body main #about .about-wrapper .about-description h2 {
             font-size: 2rem; }
-          main #about .about-wrapper .about-description h3 {
+          body main #about .about-wrapper .about-description h3 {
             font-size: 1.4rem;
             margin-top: .2rem; }
-          main #about .about-wrapper .about-description p {
+          body main #about .about-wrapper .about-description p {
             font-size: 1rem;
             line-height: 1.4rem; } }
     @media screen and (max-width: 1200px) {
-      main #about .about-wrapper {
+      body main #about .about-wrapper {
         height: 500px; }
-        main #about .about-wrapper .about-head .ah-image {
-          height: 200px;
-          width: 200px; }
-        main #about .about-wrapper .about-description {
+        body main #about .about-wrapper .about-head {
+          background-color: red; }
+          body main #about .about-wrapper .about-head .ah-image {
+            height: 200px;
+            width: 200px; }
+        body main #about .about-wrapper .about-description {
           width: 90%;
           padding: 1rem; }
-          main #about .about-wrapper .about-description h2 {
+          body main #about .about-wrapper .about-description h2 {
             font-size: 2rem;
             line-height: 2.5rem; }
-          main #about .about-wrapper .about-description h3 {
+          body main #about .about-wrapper .about-description h3 {
             font-size: 1.4rem;
             line-height: 2.5rem; }
-          main #about .about-wrapper .about-description p {
+          body main #about .about-wrapper .about-description p {
             font-size: 1rem;
             line-height: 1.2rem; } }
     @media screen and (max-width: 992px) {
-      main #about {
+      body main #about {
         padding: 1.5rem; }
-        main #about .about-wrapper {
+        body main #about .about-wrapper {
           height: 600px;
           flex-direction: column; }
-          main #about .about-wrapper .about-head {
+          body main #about .about-wrapper .about-head {
             width: 100%;
             border-radius: 20px 20px 0 0;
-            padding: .5rem; }
-            main #about .about-wrapper .about-head .ah-image {
+            padding: .5rem;
+            background-color: #fc2c2c; }
+            body main #about .about-wrapper .about-head .ah-image {
               height: 150px;
               width: 150px; }
-          main #about .about-wrapper .about-description {
+          body main #about .about-wrapper .about-description {
             width: 100%;
             padding: 1rem;
             border-radius: 0 0 20px 20px; }
-            main #about .about-wrapper .about-description h2 {
+            body main #about .about-wrapper .about-description h2 {
               font-size: 1.8rem;
               line-height: 2.5rem;
               text-align: center; }
-            main #about .about-wrapper .about-description h3 {
+            body main #about .about-wrapper .about-description h3 {
               font-size: 1.4rem;
               line-height: 2.5rem; }
-            main #about .about-wrapper .about-description p {
+            body main #about .about-wrapper .about-description p {
               font-size: .9rem;
               line-height: 1.2rem; } }
     @media screen and (max-width: 768px) {
-      main #about .about-wrapper {
-        height: 500px; }
-        main #about .about-wrapper .about-head {
-          background: #ababf7; }
-          main #about .about-wrapper .about-head .ah-image {
-            height: 200px;
-            width: 200px; }
-        main #about .about-wrapper .about-description {
-          width: 90%;
-          padding: 1rem; }
-          main #about .about-wrapper .about-description h2 {
-            font-size: 1.8rem;
-            line-height: 2.5rem; }
-          main #about .about-wrapper .about-description h3 {
-            font-size: 1.3rem;
-            line-height: 2.5rem; }
-          main #about .about-wrapper .about-description p {
-            font-size: .9rem;
-            line-height: 1.2rem; } }
-  main #skills {
+      body main #about {
+        padding: .5rem; }
+        body main #about .about-wrapper {
+          height: 600px;
+          flex-direction: column; }
+          body main #about .about-wrapper .about-head {
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+            padding: .5rem;
+            background-color: #fda1a1; }
+            body main #about .about-wrapper .about-head .ah-image {
+              height: 150px;
+              width: 150px; }
+          body main #about .about-wrapper .about-description {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0 0 20px 20px; }
+            body main #about .about-wrapper .about-description h2 {
+              font-size: 1.6rem;
+              line-height: 2.5rem;
+              text-align: center; }
+            body main #about .about-wrapper .about-description h3 {
+              font-size: 1.1rem;
+              line-height: 2.2rem; }
+            body main #about .about-wrapper .about-description p {
+              font-size: .85rem;
+              line-height: 1.1rem; } }
+    @media screen and (max-width: 576px) {
+      body main #about {
+        padding: 1.5rem; }
+        body main #about .about-wrapper {
+          height: 600px;
+          flex-direction: column; }
+          body main #about .about-wrapper .about-head {
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+            padding: .5rem;
+            background-color: #fda1a1; }
+            body main #about .about-wrapper .about-head .ah-image {
+              height: 150px;
+              width: 150px; }
+          body main #about .about-wrapper .about-description {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0 0 20px 20px; }
+            body main #about .about-wrapper .about-description h2 {
+              font-size: 1.8rem;
+              line-height: 2.5rem;
+              text-align: center; }
+            body main #about .about-wrapper .about-description h3 {
+              font-size: 1.4rem;
+              line-height: 2.5rem; }
+            body main #about .about-wrapper .about-description p {
+              font-size: .9rem;
+              line-height: 1.2rem; } }
+  body main #skills {
     background-color: white;
     color: #0d1d2c;
     padding: 2rem 0;
@@ -251,15 +362,15 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center; }
-    main #skills .skills-container {
+    body main #skills .skills-container {
       width: 800px; }
-      main #skills .skills-container .skills-top {
+      body main #skills .skills-container .skills-top {
         margin-bottom: 2rem; }
-        main #skills .skills-container .skills-top .st-header {
+        body main #skills .skills-container .skills-top .st-header {
           text-align: center;
           padding: 2rem 0;
           position: relative; }
-          main #skills .skills-container .skills-top .st-header:after {
+          body main #skills .skills-container .skills-top .st-header:after {
             content: '';
             background: #0d1d2c;
             height: 2px;
@@ -267,52 +378,52 @@ main {
             position: absolute;
             top: 80%;
             left: 47%; }
-        main #skills .skills-container .skills-top .st-body .st-items {
+        body main #skills .skills-container .skills-top .st-body .st-items {
           padding-right: .5rem;
           text-align: center; }
-          main #skills .skills-container .skills-top .st-body .st-items p {
+          body main #skills .skills-container .skills-top .st-body .st-items p {
             font-size: .8rem;
             font-weight: 500; }
-        main #skills .skills-container .skills-top .st-body .st-wrapper-fe {
+        body main #skills .skills-container .skills-top .st-body .st-wrapper-fe {
           display: flex;
           justify-content: center; }
-          main #skills .skills-container .skills-top .st-body .st-wrapper-fe #htmlP {
+          body main #skills .skills-container .skills-top .st-body .st-wrapper-fe #htmlP {
             color: #F16529; }
-          main #skills .skills-container .skills-top .st-body .st-wrapper-fe #cssP {
+          body main #skills .skills-container .skills-top .st-body .st-wrapper-fe #cssP {
             color: #2565AE; }
-          main #skills .skills-container .skills-top .st-body .st-wrapper-fe #jsP {
+          body main #skills .skills-container .skills-top .st-body .st-wrapper-fe #jsP {
             color: #E78625; }
-          main #skills .skills-container .skills-top .st-body .st-wrapper-fe #designP {
+          body main #skills .skills-container .skills-top .st-body .st-wrapper-fe #designP {
             color: #04887A; }
-          main #skills .skills-container .skills-top .st-body .st-wrapper-fe #sassP {
+          body main #skills .skills-container .skills-top .st-body .st-wrapper-fe #sassP {
             color: #CD6799; }
-          main #skills .skills-container .skills-top .st-body .st-wrapper-fe #bootstrapP {
+          body main #skills .skills-container .skills-top .st-body .st-wrapper-fe #bootstrapP {
             color: #553C7B; }
-          main #skills .skills-container .skills-top .st-body .st-wrapper-fe #jqueryP {
+          body main #skills .skills-container .skills-top .st-body .st-wrapper-fe #jqueryP {
             height: 30px;
             width: 30px; }
-        main #skills .skills-container .skills-top .st-body .st-wrapper-beo {
+        body main #skills .skills-container .skills-top .st-body .st-wrapper-beo {
           display: flex;
           justify-content: center; }
-          main #skills .skills-container .skills-top .st-body .st-wrapper-beo #nodeP {
+          body main #skills .skills-container .skills-top .st-body .st-wrapper-beo #nodeP {
             color: #3C873A; }
-          main #skills .skills-container .skills-top .st-body .st-wrapper-beo #jsonP {
+          body main #skills .skills-container .skills-top .st-body .st-wrapper-beo #jsonP {
             color: #FFAE41;
             height: 31px;
             width: 31px; }
-          main #skills .skills-container .skills-top .st-body .st-wrapper-beo #phpP {
+          body main #skills .skills-container .skills-top .st-body .st-wrapper-beo #phpP {
             color: #474A8A; }
-          main #skills .skills-container .skills-top .st-body .st-wrapper-beo #wordpressP {
+          body main #skills .skills-container .skills-top .st-body .st-wrapper-beo #wordpressP {
             color: #00749C; }
-          main #skills .skills-container .skills-top .st-body .st-wrapper-beo #gitP {
+          body main #skills .skills-container .skills-top .st-body .st-wrapper-beo #gitP {
             color: #333333; }
-      main #skills .skills-container .skills-process {
+      body main #skills .skills-container .skills-process {
         margin-bottom: 2rem; }
-        main #skills .skills-container .skills-process .sp-header {
+        body main #skills .skills-container .skills-process .sp-header {
           text-align: center;
           padding: 2rem 0;
           position: relative; }
-          main #skills .skills-container .skills-process .sp-header:after {
+          body main #skills .skills-container .skills-process .sp-header:after {
             content: '';
             background: #0d1d2c;
             height: 2px;
@@ -320,86 +431,86 @@ main {
             position: absolute;
             top: 80%;
             left: 47%; }
-        main #skills .skills-container .skills-process .sp-body {
+        body main #skills .skills-container .skills-process .sp-body {
           display: flex;
           justify-content: center; }
-          main #skills .skills-container .skills-process .sp-body .sp-items {
+          body main #skills .skills-container .skills-process .sp-body .sp-items {
             padding-right: 1.5rem;
             text-align: center; }
-            main #skills .skills-container .skills-process .sp-body .sp-items p {
+            body main #skills .skills-container .skills-process .sp-body .sp-items p {
               font-size: 1rem;
               font-weight: 500; }
-          main #skills .skills-container .skills-process .sp-body #discoverP:hover {
+          body main #skills .skills-container .skills-process .sp-body #discoverP:hover {
             transition: all .1s ease-in-out;
             color: #00508B; }
-          main #skills .skills-container .skills-process .sp-body #ideaP:hover {
+          body main #skills .skills-container .skills-process .sp-body #ideaP:hover {
             transition: all .1s ease-in-out;
             color: #FCD733; }
-          main #skills .skills-container .skills-process .sp-body #uxP:hover {
+          body main #skills .skills-container .skills-process .sp-body #uxP:hover {
             transition: all .1s ease-in-out;
             color: #A70042; }
-          main #skills .skills-container .skills-process .sp-body #developP:hover {
+          body main #skills .skills-container .skills-process .sp-body #developP:hover {
             transition: all .1s ease-in-out;
             color: #18463B; }
-          main #skills .skills-container .skills-process .sp-body #testP:hover {
+          body main #skills .skills-container .skills-process .sp-body #testP:hover {
             transition: all .1s ease-in-out;
             color: #0C841D; }
-          main #skills .skills-container .skills-process .sp-body #launchP:hover {
+          body main #skills .skills-container .skills-process .sp-body #launchP:hover {
             transition: all .1s ease-in-out;
             color: #A60004; }
-  main #projects {
+  body main #projects {
     background: #d4d8e2;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center; }
-    main #projects .projects-container {
+    body main #projects .projects-container {
       width: 100%;
       border-radius: 5px; }
-      main #projects .projects-container .project-1,
-      main #projects .projects-container .project-2,
-      main #projects .projects-container .project-3 {
+      body main #projects .projects-container .project-1,
+      body main #projects .projects-container .project-2,
+      body main #projects .projects-container .project-3 {
         display: flex;
         justify-content: center; }
-        main #projects .projects-container .project-1 .project-item-wrap,
-        main #projects .projects-container .project-2 .project-item-wrap,
-        main #projects .projects-container .project-3 .project-item-wrap {
+        body main #projects .projects-container .project-1 .project-item-wrap,
+        body main #projects .projects-container .project-2 .project-item-wrap,
+        body main #projects .projects-container .project-3 .project-item-wrap {
           height: 400px;
           display: flex;
           padding: 3rem;
           width: 1200px; }
-          main #projects .projects-container .project-1 .project-item-wrap .project-head,
-          main #projects .projects-container .project-2 .project-item-wrap .project-head,
-          main #projects .projects-container .project-3 .project-item-wrap .project-head {
+          body main #projects .projects-container .project-1 .project-item-wrap .project-head,
+          body main #projects .projects-container .project-2 .project-item-wrap .project-head,
+          body main #projects .projects-container .project-3 .project-item-wrap .project-head {
             border: 2px solid black;
             height: 100%;
             width: 1000px;
             box-shadow: 2px 5px 15px; }
-          main #projects .projects-container .project-1 .project-item-wrap .project-body,
-          main #projects .projects-container .project-2 .project-item-wrap .project-body,
-          main #projects .projects-container .project-3 .project-item-wrap .project-body {
+          body main #projects .projects-container .project-1 .project-item-wrap .project-body,
+          body main #projects .projects-container .project-2 .project-item-wrap .project-body,
+          body main #projects .projects-container .project-3 .project-item-wrap .project-body {
             height: 100%;
             width: 100%;
             color: #0d1d2c;
             display: flex;
             justify-content: center;
             align-items: center; }
-            main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-wrapper,
-            main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-wrapper,
-            main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-wrapper {
+            body main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-wrapper,
+            body main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-wrapper,
+            body main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-wrapper {
               display: flex;
               flex-direction: column;
               height: 200px; }
-            main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-button,
-            main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-button,
-            main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-button {
+            body main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-button,
+            body main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-button,
+            body main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-button {
               height: 100%;
               width: 100%;
               display: flex;
               align-items: center; }
-              main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-button a,
-              main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-button a,
-              main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-button a {
+              body main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-button a,
+              body main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-button a,
+              body main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-button a {
                 margin-right: .5rem;
                 padding: 1rem 1.5rem;
                 border: 2px solid #ffffff;
@@ -409,81 +520,79 @@ main {
                 font-size: 1rem;
                 font-weight: 500;
                 transition: all .2s ease-in-out; }
-                main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-button a a,
-                main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-button a a,
-                main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-button a a {
+                body main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-button a a,
+                body main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-button a a,
+                body main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-button a a {
                   color: white; }
-                main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-button a:hover,
-                main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-button a:hover,
-                main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-button a:hover {
+                body main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-button a:hover,
+                body main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-button a:hover,
+                body main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-button a:hover {
                   cursor: pointer;
                   background-color: #ffffff;
                   border: 2px solid #0d1d2c;
                   color: #0d1d2c; }
-    main #projects .project-1 {
+    body main #projects .project-1 {
       background-color: #6E90B5; }
-      main #projects .project-1 .project-head {
+      body main #projects .project-1 .project-head {
         background-image: url("../img/gymfitness.jpg");
         background-size: cover; }
-    main #projects .project-2 {
+    body main #projects .project-2 {
       background-color: #FFF7D9; }
-      main #projects .project-2 .project-head {
+      body main #projects .project-2 .project-head {
         background-image: url("../img/fangtasticbrows.jpg");
         background-size: cover; }
-    main #projects .project-3 {
+    body main #projects .project-3 {
       background-color: #6E90B5; }
-      main #projects .project-3 .project-head {
+      body main #projects .project-3 .project-head {
         background-image: url("../img/4runner.jpg");
         background-size: cover; }
-
-#contact {
-  background-color: white;
-  color: #0d1d2c;
-  min-height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  #contact .contact-top {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 500px; }
-    #contact .contact-top .contact-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
-      #contact .contact-top .contact-text h2 {
-        margin-bottom: 2rem;
-        display: flex;
-        justify-content: center; }
-      #contact .contact-top .contact-text p {
-        margin-bottom: 1rem; }
-    #contact .contact-top .contact-svg {
-      width: 50%;
-      display: flex;
-      justify-content: center; }
-      #contact .contact-top .contact-svg img {
-        width: 80%; }
-
-footer {
-  background-color: #d4d8e2;
-  color: #0d1d2c;
-  height: 20vh;
-  width: 100%;
-  display: flex;
-  justify-content: center; }
-  footer .footer-container {
-    width: 1200px;
+  body main #contact {
+    background-color: white;
+    color: #0d1d2c;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center; }
-    footer .footer-container .footer-items {
-      text-align: center;
-      margin: .7rem;
-      cursor: pointer; }
-      footer .footer-container .footer-items a {
-        color: #0d1d2c; }
-        footer .footer-container .footer-items a:hover {
-          color: #24517b;
-          transition: all .2s ease-in-out;
-          color: #ffffff; }
+    body main #contact .contact-top {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 500px; }
+      body main #contact .contact-top .contact-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        body main #contact .contact-top .contact-text h2 {
+          margin-bottom: 2rem;
+          display: flex;
+          justify-content: center; }
+        body main #contact .contact-top .contact-text p {
+          margin-bottom: 1rem; }
+      body main #contact .contact-top .contact-svg {
+        width: 50%;
+        display: flex;
+        justify-content: center; }
+        body main #contact .contact-top .contact-svg img {
+          width: 80%; }
+  body main footer {
+    background-color: #d4d8e2;
+    color: #0d1d2c;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    body main footer .footer-container {
+      width: 1200px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      body main footer .footer-container .footer-items {
+        text-align: center;
+        margin: .7rem;
+        cursor: pointer; }
+        body main footer .footer-container .footer-items a {
+          color: #0d1d2c; }
+          body main footer .footer-container .footer-items a:hover {
+            color: #24517b;
+            transition: all .2s ease-in-out;
+            color: #ffffff; }

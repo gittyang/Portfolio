@@ -1,8 +1,8 @@
 header {
+  // border: 2px solid red;
   background-color: $primary-color;
   height: 100vh;
   width: 200px;
-
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -39,4 +39,74 @@ header {
       padding: 0rem 0rem 2px 8rem;
     }
   }
+  // header
+
+  @media screen and (max-width: 1200px) {
+    width: 175px;
   }
+
+  // header
+  @media screen and (max-width: 992px) {
+    width: 150px;
+
+    .menu-nav {
+      font-size: 1rem;
+      font-weight: 500;
+  
+      .nav-item {
+        padding: 2rem 0rem 0rem 8rem;
+        margin-right: 1rem;
+      }
+  
+      .nav-link {
+        white-space: nowrap;
+        color: $fourth-color;
+      }
+  
+      .nav-link:hover {
+        @include easeOutNAV();
+      }
+  
+      .nav-item-line {
+        background: white;
+        margin: 1rem 1rem;
+        padding: 0rem 0rem 2px 7rem;
+      }
+    }
+  }
+
+  // header
+  @media screen and (max-width: 768px) {
+    width: 120px;
+
+    .menu-nav {
+      font-size: .9rem;
+      font-weight: 500;
+  
+      .nav-item {
+        padding: 2rem 0rem 0rem 8rem;
+        margin-right: 1rem;
+      }
+  
+      .nav-link {
+        white-space: nowrap;
+        color: $fourth-color;
+      }
+  
+      .nav-link:hover {
+        @include easeOutNAV();
+      }
+  
+      .nav-item-line {
+        background: white;
+        margin: 1rem 1rem;
+        padding: 0rem 0rem 2px 6rem;
+      }
+    }
+  }
+
+  // header
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
+}

@@ -17,6 +17,10 @@ $home-image: url(../img/home.jpg);
 $about-image: url(../img/canoe2.jpg);
 $background-opacity: 0.9;
 
+.hide {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;

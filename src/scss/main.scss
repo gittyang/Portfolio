@@ -1,526 +1,648 @@
 @import 'config';
 @import 'header';
 
-main {
-  display: flex;
-  flex-direction: column;
-  margin-left: 200px;
+body {
+  // border: 2px solid blue;
 
-// --- ***Home Section*** --- //
-#home {
-  color: $fourth-color;
-  padding: 5rem;
-  height: 100vh;;
-  background: $home-image;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background: rgba(0, 0, 0, .8);
-  }
-
-  .home-title {
-    z-index: 1;
+  main {
+    // border: 2px solid green;
     display: flex;
     flex-direction: column;
+    margin-left: 200px;
 
-    h1 {
-      font-size: 4rem;
-      margin-bottom: .5rem;
+    // main
+    @media screen and (max-width: 1200px) {
+      margin-left: 175px;
+    }
+    @media screen and (max-width: 992px) {
+      margin-left: 150px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-left: 120px;
+    }
+    @media screen and (max-width: 576px) {
+      margin-left: 0;
     }
 
-    p {
-      margin-bottom: 1.5rem;
-      margin-left: .1rem;
-    }
-  }
-
-  .cta {
-    display: flex;
-    z-index: 1;
-
-    a {
-      @include button(); 
-    }
-  }
-}  // --- End of Home Section --- //
-
-
-// --- ***About Section*** --- //
-#about {
-  // border: 2px solid red;
-  background: $secondary-color;
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .about-wrapper {
-    // border: 2px solid green;
-    background: $secondary-color;
-    border-radius: 5px;
-    display: flex;
-
-    .about-head {
-      // border: 2px solid red;
-      width: 35%;
-      border-radius: 20px 0 0 20px;
-      background: $alt-yellow;
+    // --- ***Home Section*** --- //
+    #home {
+      // border: 2px solid blue;
+      color: $fourth-color;
+      padding: 5rem;
+      height: 100vh;;
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background: rgba(0, 0, 0, .8);
+      }
+
+      .home-title {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+          font-size: 4rem;
+          margin-bottom: .5rem;
+        }
+
+        p {
+          margin-bottom: 1.5rem;
+          margin-left: .1rem;
+        }
+      }
+
+      .cta {
+        display: flex;
+        z-index: 1;
+
+        a {
+          @include button(); 
+        }
+      }
+
+      // #home
+      @media screen and (max-width: 992px) {
+
+        .home-title {
+          h1 {
+            font-size: 3.5rem;
+          }
+        }
+
+        .cta {
+
+          a {
+            padding: .75rem .75rem;
+          }
+        }
+      }
+
+      // #home
+      @media screen and (max-width: 768px) {
+
+        .home-title {
+          h1 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+
+        .cta {
+
+          a {
+            font-size: .8rem;
+            padding: .5rem;
+          }
+        }
+      }
+    }  // --- End of Home Section --- //
+
+
+    // --- ***About Section*** --- //
+    #about {
+      // border: 2px solid red;
+      background: $secondary-color;
+      padding: 2rem;
+      display: flex;
       justify-content: center;
       align-items: center;
 
-      .ah-image {
-        border: 2px solid $primary-color;
-        border-radius: 50%;
-        height: 300px;
-        width: 300px;
-      }    
-    }
- 
-
-    .about-description {
-      // border: 2px solid orange;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: $fourth-color;
-      width: 65%;
-      z-index: 1;
-      padding: 2rem;
-      background: $primary-color;
-      border-radius: 0 20px 20px 0;
-
-      p {
+      .about-wrapper {
         // border: 2px solid green;
-        padding-bottom: .5rem;
-      } 
-      
-      h3 {
-        // border: 2px solid orangered;
-        margin-top: 1rem;
-      }
-    }
-  } // end of about wrapper //
+        background: $secondary-color;
+        border-radius: 5px;
+        display: flex;
 
-  // MQ starting on '.about'
-  @media screen and (max-width: 1440px) {
-    .about-wrapper {
-      height: 500px;
-
-      .about-head {
-
-        .ah-image {
-          height: 275px;
-          width: 275px;
-        }         
-      }
-
-      .about-description {
-        width: 80%;
-        padding: 1.5rem;
-
-        h2 {
-          font-size: 2rem;
-        }
-
-        h3 {
-          font-size: 1.4rem;
-          margin-top: .2rem;
-        }
-
-        p {
-          font-size: 1rem;
-          line-height: 1.4rem;
-        }
-      }
-    }
-
-  }
-
-  // MQ starting on '.about'
-  @media screen and (max-width: 1200px) {
-    .about-wrapper {
-        height: 500px;
-
-      .about-head {
-
-        .ah-image {
-          height: 200px;
-          width: 200px;
-        } 
-      }
-
-      .about-description {
-        width: 90%;
-        padding: 1rem;
-
-        h2 {
-          font-size: 2rem;
-          line-height: 2.5rem;
-        }
-        
-        h3 {
-          // margin-top: 0;
-          font-size: 1.4rem;
-          line-height: 2.5rem;
-        }
-
-        p {
-          font-size: 1rem;
-          line-height: 1.2rem;
-        }
-      }
-    }
-  }
-
-  // MQ starting on '.about'
-  @media screen and (max-width: 992px) {
-    // border: 2px solid cyan;
-    padding: 1.5rem;
-
-    .about-wrapper {
-      // border: 2px solid green;
-      height: 600px;
-      flex-direction: column;
-      // background: $alt-yellow;
-
-      .about-head {
-        // border: 2px solid blue;
-        width: 100%;
-        border-radius: 20px 20px 0 0;
-        padding: .5rem;
-
-        .ah-image {
-          height: 150px;
-          width: 150px;
-        } 
-      }
-
-      .about-description {
-        // border: 2px solid red;
-        width: 100%;
-        padding: 1rem;
-        border-radius: 0 0 20px 20px;
-
-        h2 {
-          font-size: 1.8rem;
-          line-height: 2.5rem;
-          text-align: center;
-        }
-        
-        h3 {
-          // margin-top: 0;
-          font-size: 1.4rem;
-          line-height: 2.5rem;
-        }
-
-        p {
-          font-size: .9rem;
-          line-height: 1.2rem;
-        }
-      }
-    }
-  }
-
-  // MQ starting on '.about'
-  @media screen and (max-width: 768px) {
-    .about-wrapper {
-        height: 500px;
-
-      .about-head {
-        background: rgb(171, 171, 247);
-
-        .ah-image {
-          height: 200px;
-          width: 200px;
-        } 
-      }
-
-      .about-description {
-        width: 90%;
-        padding: 1rem;
-
-        h2 {
-          font-size: 1.8rem;
-          line-height: 2.5rem;
-        }
-        
-        h3 {
-          // margin-top: 0;
-          font-size: 1.3rem;
-          line-height: 2.5rem;
-        }
-
-        p {
-          font-size: .9rem;
-          line-height: 1.2rem;
-        }
-      }
-    }
-  }
-
-} // --- End of About Section --- //
-
-
- // --- ***Skills Section*** --- //
- #skills {
-  background-color: $fourth-color;
-  color: $primary-color;
-  padding: 2rem 0;
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-    .skills-container {
-      // border: 2px solid red;
-      width: 800px;
-
-      .skills-top {
-        margin-bottom: 2rem;
-
-        .st-header {
-          text-align: center;
-          padding: 2rem 0;
-          position: relative;
-
-          &:after {
-            content: '';
-            background: $primary-color;
-            height: 2px;
-            width: 50px;
-            position: absolute;
-            top: 80%;
-            left: 47%;
-          }
-        }
-
-        .st-body {
-          .st-items {
-            padding-right: .5rem;
-            text-align: center;
-    
-            p {
-              font-size: .8rem;
-              font-weight: 500;
-            }        
-          }
-
-          .st-wrapper-fe {
-            display: flex;
-            justify-content: center;
-            #htmlP {
-              color: #F16529;
-            }
-
-            #cssP {
-              color: #2565AE;
-            }
-
-            #jsP {
-              color: #E78625;
-            }
-
-            #designP {
-              color: #04887A;
-            }
-
-            #sassP{
-              color: #CD6799;
-            }
-
-            #bootstrapP {
-              color: #553C7B;
-            }
-
-            #jqueryP {
-              height: 30px;
-              width: 30px;
-            }
-          }
-
-          .st-wrapper-beo {
-            display: flex;
-            justify-content: center;
-          
-            #nodeP {
-              color: #3C873A;
-            }
-
-            #jsonP {
-              color: #FFAE41;
-              height: 31px;
-              width: 31px;
-            }
-
-            #phpP {
-              color: #474A8A;
-            }
-            
-            #wordpressP {
-              color: #00749C;
-            }
-
-            #gitP {
-              color: #333333;
-            }
-          }
-        }
-      }
-
-      .skills-process {
-        margin-bottom: 2rem;
-
-        .sp-header {
-          text-align: center;
-          padding: 2rem 0;
-          position: relative;
-
-          &:after {
-            content: '';
-            background: $primary-color;
-            height: 2px;
-            width: 50px;
-            position: absolute;
-            top: 80%;
-            left: 47%;
-          }
-        }
-
-        .sp-body {
+        .about-head {
+          // border: 2px solid red;
+          width: 35%;
+          border-radius: 20px 0 0 20px;
+          background: $alt-yellow;
           display: flex;
+          flex-direction: column;
           justify-content: center;
-          .sp-items {
-            padding-right: 1.5rem;
-            text-align: center;
+          align-items: center;
+
+          .ah-image {
+            border: 2px solid $primary-color;
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+          }    
+        }
     
+
+        .about-description {
+          // border: 2px solid orange;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          color: $fourth-color;
+          width: 65%;
+          z-index: 1;
+          padding: 2rem;
+          background: $primary-color;
+          border-radius: 0 20px 20px 0;
+
+          p {
+            // border: 2px solid green;
+            padding-bottom: .5rem;
+          } 
+          
+          h3 {
+            // border: 2px solid orangered;
+            margin-top: 1rem;
+          }
+        }
+      } // end of about wrapper //
+
+      // MQ starting on '.about'
+      @media screen and (max-width: 1440px) {
+        .about-wrapper {
+          height: 500px;
+
+          .about-head {
+
+            .ah-image {
+              height: 275px;
+              width: 275px;
+            }         
+          }
+
+          .about-description {
+            width: 80%;
+            padding: 1.5rem;
+
+            h2 {
+              font-size: 2rem;
+            }
+
+            h3 {
+              font-size: 1.4rem;
+              margin-top: .2rem;
+            }
+
             p {
               font-size: 1rem;
-              font-weight: 500;
-            }        
-          }
-
-          #discoverP {
-
-            &:hover {
-              transition: all .1s ease-in-out;
-              color: #00508B;
+              line-height: 1.4rem;
             }
           }
+        }
 
-          #ideaP {
-            &:hover{
-              transition: all .1s ease-in-out;
-              color: #FCD733 ;
-            }
+      }
+
+      // MQ starting on '.about'
+      @media screen and (max-width: 1200px) {
+        .about-wrapper {
+            height: 500px;
+
+          .about-head {
+            background-color: red;
+
+            .ah-image {
+              height: 200px;
+              width: 200px;
+            } 
           }
 
-          #uxP {
-            &:hover{
-              transition: all .1s ease-in-out;
-              color: #A70042 ;
+          .about-description {
+            width: 90%;
+            padding: 1rem;
+
+            h2 {
+              font-size: 2rem;
+              line-height: 2.5rem;
+            }
+            
+            h3 {
+              // margin-top: 0;
+              font-size: 1.4rem;
+              line-height: 2.5rem;
+            }
+
+            p {
+              font-size: 1rem;
+              line-height: 1.2rem;
             }
           }
-
-          #developP {
-            &:hover{
-              transition: all .1s ease-in-out;
-              color: #18463B ;
-            }
-          }
-
-          #testP {
-            &:hover{
-              transition: all .1s ease-in-out;
-              color: #0C841D ;
-            }
-          }
-
-          #launchP {
-            &:hover{
-              transition: all .1s ease-in-out;
-              color: #A60004;
-            }
-          }
-
         }
       }
-    }
-  } // --- End of Skills Section --- //
 
+      // MQ starting on '.about'
+      @media screen and (max-width: 992px) {
+        // border: 2px solid cyan;
+        padding: 1.5rem;
 
-  // --- ***Projects Section*** --- //
-  #projects {
-    // border: 2px solid red;
-    background: $secondary-color;
-    // padding: 2rem 0;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+        .about-wrapper {
+          // border: 2px solid green;
+          height: 600px;
+          flex-direction: column;
+          // background: $alt-yellow;
 
-    .projects-container {
-      // border: 2px solid green;
-      // width: 1200px;
-      width: 100%;
-      border-radius: 5px;
-
-      .project-1,
-      .project-2,
-      .project-3 {
-        // border: 2px solid blue;
-        display: flex;
-        justify-content: center;
-  
-  
-        .project-item-wrap {
-          // border: 2px solid blue;
-          height: 400px;
-          display: flex;
-          padding: 3rem;
-          width: 1200px;
-
-          .project-head {
-            border: 2px solid black;
-            height: 100%;
-            width: 1000px;
-            box-shadow: 2px 5px 15px;
-          }
-    
-          .project-body {
-            // border: 5px solid green;
-            height: 100%;
+          .about-head {
+            // border: 2px solid blue;
             width: 100%;
-            color: $primary-color;
-    
+            border-radius: 20px 20px 0 0;
+            padding: .5rem;
+            background-color: rgb(252, 44, 44);
+
+            .ah-image {
+              height: 150px;
+              width: 150px;
+            } 
+          }
+
+          .about-description {
+            // border: 2px solid red;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0 0 20px 20px;
+
+            h2 {
+              font-size: 1.8rem;
+              line-height: 2.5rem;
+              text-align: center;
+            }
+            
+            h3 {
+              // margin-top: 0;
+              font-size: 1.4rem;
+              line-height: 2.5rem;
+            }
+
+            p {
+              font-size: .9rem;
+              line-height: 1.2rem;
+            }
+          }
+        }
+      }
+
+      // MQ starting on '.about'
+      @media screen and (max-width: 768px) {
+        // border: 2px solid cyan;
+        padding: .5rem;
+
+        .about-wrapper {
+          // border: 2px solid green;
+          height: 600px;
+          flex-direction: column;
+          // background: $alt-yellow;
+
+          .about-head {
+            // border: 2px solid blue;
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+            padding: .5rem;
+            background-color: rgb(253, 161, 161);
+
+            .ah-image {
+              height: 150px;
+              width: 150px;
+            } 
+          }
+
+          .about-description {
+            // border: 2px solid red;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0 0 20px 20px;
+
+            h2 {
+              font-size: 1.6rem;
+              line-height: 2.5rem;
+              text-align: center;
+            }
+            
+            h3 {
+              // margin-top: 0;
+              font-size: 1.1rem;
+              line-height: 2.2rem;
+            }
+
+            p {
+              font-size: .85rem;
+              line-height: 1.1rem;
+            }
+          }
+        }
+      }
+
+      // MQ starting on '.about'
+      @media screen and (max-width: 576px) {
+        // border: 2px solid cyan;
+        padding: 1.5rem;
+
+        .about-wrapper {
+          // border: 2px solid green;
+          height: 600px;
+          flex-direction: column;
+          // background: $alt-yellow;
+
+          .about-head {
+            // border: 2px solid blue;
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+            padding: .5rem;
+            background-color: rgb(253, 161, 161);
+
+            .ah-image {
+              height: 150px;
+              width: 150px;
+            } 
+          }
+
+          .about-description {
+            // border: 2px solid red;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0 0 20px 20px;
+
+            h2 {
+              font-size: 1.8rem;
+              line-height: 2.5rem;
+              text-align: center;
+            }
+            
+            h3 {
+              // margin-top: 0;
+              font-size: 1.4rem;
+              line-height: 2.5rem;
+            }
+
+            p {
+              font-size: .9rem;
+              line-height: 1.2rem;
+            }
+          }
+        }
+      }
+    } // --- End of About Section --- //
+
+
+    // --- ***Skills Section*** --- //
+    #skills {
+      background-color: $fourth-color;
+      color: $primary-color;
+      padding: 2rem 0;
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .skills-container {
+        // border: 2px solid red;
+        width: 800px;
+
+        .skills-top {
+          margin-bottom: 2rem;
+
+          .st-header {
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+
+            &:after {
+              content: '';
+              background: $primary-color;
+              height: 2px;
+              width: 50px;
+              position: absolute;
+              top: 80%;
+              left: 47%;
+            }
+          }
+
+          .st-body {
+            .st-items {
+              padding-right: .5rem;
+              text-align: center;
+      
+              p {
+                font-size: .8rem;
+                font-weight: 500;
+              }        
+            }
+
+            .st-wrapper-fe {
+              display: flex;
+              justify-content: center;
+              #htmlP {
+                color: #F16529;
+              }
+
+              #cssP {
+                color: #2565AE;
+              }
+
+              #jsP {
+                color: #E78625;
+              }
+
+              #designP {
+                color: #04887A;
+              }
+
+              #sassP{
+                color: #CD6799;
+              }
+
+              #bootstrapP {
+                color: #553C7B;
+              }
+
+              #jqueryP {
+                height: 30px;
+                width: 30px;
+              }
+            }
+
+            .st-wrapper-beo {
+              display: flex;
+              justify-content: center;
+            
+              #nodeP {
+                color: #3C873A;
+              }
+
+              #jsonP {
+                color: #FFAE41;
+                height: 31px;
+                width: 31px;
+              }
+
+              #phpP {
+                color: #474A8A;
+              }
+              
+              #wordpressP {
+                color: #00749C;
+              }
+
+              #gitP {
+                color: #333333;
+              }
+            }
+          }
+        }
+
+        .skills-process {
+          margin-bottom: 2rem;
+
+          .sp-header {
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+
+            &:after {
+              content: '';
+              background: $primary-color;
+              height: 2px;
+              width: 50px;
+              position: absolute;
+              top: 80%;
+              left: 47%;
+            }
+          }
+
+          .sp-body {
             display: flex;
             justify-content: center;
-            align-items: center;
-    
-            .pb-wrapper {
-              // border: 2px solid red;
-              display: flex;
-              flex-direction: column;
-              height: 200px;
-              // width: 100%;
+            .sp-items {
+              padding-right: 1.5rem;
+              text-align: center;
+      
+              p {
+                font-size: 1rem;
+                font-weight: 500;
+              }        
+            }
+
+            #discoverP {
+
+              &:hover {
+                transition: all .1s ease-in-out;
+                color: #00508B;
               }
+            }
+
+            #ideaP {
+              &:hover{
+                transition: all .1s ease-in-out;
+                color: #FCD733 ;
+              }
+            }
+
+            #uxP {
+              &:hover{
+                transition: all .1s ease-in-out;
+                color: #A70042 ;
+              }
+            }
+
+            #developP {
+              &:hover{
+                transition: all .1s ease-in-out;
+                color: #18463B ;
+              }
+            }
+
+            #testP {
+              &:hover{
+                transition: all .1s ease-in-out;
+                color: #0C841D ;
+              }
+            }
+
+            #launchP {
+              &:hover{
+                transition: all .1s ease-in-out;
+                color: #A60004;
+              }
+            }
+
+          }
+        }
+      }
+    } // --- End of Skills Section --- //
+
+
+    // --- ***Projects Section*** --- //
+    #projects {
+      // border: 2px solid red;
+      background: $secondary-color;
+      // padding: 2rem 0;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .projects-container {
+        // border: 2px solid green;
+        // width: 1200px;
+        width: 100%;
+        border-radius: 5px;
+
+        .project-1,
+        .project-2,
+        .project-3 {
+          // border: 2px solid blue;
+          display: flex;
+          justify-content: center;
     
+    
+          .project-item-wrap {
+            // border: 2px solid blue;
+            height: 400px;
+            display: flex;
+            padding: 3rem;
+            width: 1200px;
+
+            .project-head {
+              border: 2px solid black;
+              height: 100%;
+              width: 1000px;
+              box-shadow: 2px 5px 15px;
+            }
+      
+            .project-body {
+              // border: 5px solid green;
+              height: 100%;
+              width: 100%;
+              color: $primary-color;
+      
+              display: flex;
+              justify-content: center;
+              align-items: center;
+      
+              .pb-wrapper {
+                // border: 2px solid red;
+                display: flex;
+                flex-direction: column;
+                height: 200px;
+                // width: 100%;
+                }
+      
               .pb-button {
                 // border: 2px solid purple;
                 height: 100%;
@@ -534,13 +656,12 @@ main {
                   @include button(); 
 
                 }
-    
               }
             }
           }
         }
       }
-  
+    
       .project-1 {
         background-color: $alt-blue;
 
@@ -569,99 +690,99 @@ main {
           background-size: cover;
         }
       }
-    }
-  } // --- End of Projects Section ---
-
-
-  // --- ***Contact Section*** --- //
-  #contact {
-    // border: 2px solid blue;
-    background-color: white;   
-    color: $primary-color;   
-    // padding: 2rem;
-    min-height: 80vh;  
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    
-    .contact-top {
-      // border: 2px solid red;
-      display: flex;
-      justify-content: center;
-      // flex-direction: column;
-      // align-items: center;
-      width: 100%;
-      height: 500px;
-
-      .contact-text {
-        // border: 2px solid cyan;
-        // width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        // align-items: center;
-        // padding: 5rem 0;
-
-        h2 {
-          // border: 2px solid green;
-          margin-bottom: 2rem;
-          display: flex;
-          justify-content: center;
-        }
-
-        p {
-          // border: 2px solid red;
-          margin-bottom: 1rem;
-        }
-      }
-
-      .contact-svg {
-        // border: 2px solid blue;
-        width: 50%;
-        display: flex;
-        justify-content: center;
+    } // --- End of Projects Section ---
   
-        img {
-          // border: 2px solid green;
-          width: 80%;
-        }
-      }
-    }
-
-  } // --- End of Contact Section --- //
 
 
-   // --- ***Footer Section***--- //
-  footer {
-  background-color: $secondary-color;
-  color: $primary-color;
-  height: 20vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-
-    .footer-container {
-      width: 1200px;
+    // --- ***Contact Section*** --- //
+    #contact {
+      // border: 2px solid blue;
+      background-color: white;   
+      color: $primary-color;   
+      // padding: 2rem;
+      min-height: 80vh;  
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: center; 
+      
+      .contact-top {
+        // border: 2px solid red;
+        display: flex;
+        justify-content: center;
+        // flex-direction: column;
+        // align-items: center;
+        width: 100%;
+        height: 500px;
 
-      .footer-items {
-        text-align: center;
-        margin: .7rem;
-        cursor: pointer;
+        .contact-text {
+          // border: 2px solid cyan;
+          // width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          // align-items: center;
+          // padding: 5rem 0;
 
-        a{
-          color: $primary-color;
+          h2 {
+            // border: 2px solid green;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+          }
 
-          &:hover {
-            color: lighten($color: $primary-color, $amount: 20);
-            @include easeOutFT();
+          p {
+            // border: 2px solid red;
+            margin-bottom: 1rem;
           }
         }
 
+        .contact-svg {
+          // border: 2px solid blue;
+          width: 50%;
+          display: flex;
+          justify-content: center;
+    
+          img {
+            // border: 2px solid green;
+            width: 80%;
+          }
+        }
       }
-    }
+
+    } // --- End of Contact Section --- //
+
+
+    // --- ***Footer Section***--- //
+    footer {
+    background-color: $secondary-color;
+    color: $primary-color;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+      .footer-container {
+        width: 1200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .footer-items {
+          text-align: center;
+          margin: .7rem;
+          cursor: pointer;
+
+          a{
+            color: $primary-color;
+
+            &:hover {
+              color: lighten($color: $primary-color, $amount: 20);
+              @include easeOutFT();
+            }
+          }
+        }
+      }
+    } // --- End of Footer --- //
   }
- // --- End of Footer --- //
+}
     
