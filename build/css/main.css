@@ -132,7 +132,6 @@ main {
     main #about .about-wrapper {
       background: #d4d8e2;
       border-radius: 5px;
-      height: 550px;
       display: flex; }
       main #about .about-wrapper .about-head {
         width: 35%;
@@ -143,7 +142,8 @@ main {
         justify-content: center;
         align-items: center; }
         main #about .about-wrapper .about-head .ah-image {
-          border: 2px solid black;
+          border: 2px solid #0d1d2c;
+          border-radius: 50%;
           height: 300px;
           width: 300px; }
       main #about .about-wrapper .about-description {
@@ -160,6 +160,88 @@ main {
           padding-bottom: .5rem; }
         main #about .about-wrapper .about-description h3 {
           margin-top: 1rem; }
+    @media screen and (max-width: 1440px) {
+      main #about .about-wrapper {
+        height: 500px; }
+        main #about .about-wrapper .about-head .ah-image {
+          height: 275px;
+          width: 275px; }
+        main #about .about-wrapper .about-description {
+          width: 80%;
+          padding: 1.5rem; }
+          main #about .about-wrapper .about-description h2 {
+            font-size: 2rem; }
+          main #about .about-wrapper .about-description h3 {
+            font-size: 1.4rem;
+            margin-top: .2rem; }
+          main #about .about-wrapper .about-description p {
+            font-size: 1rem;
+            line-height: 1.4rem; } }
+    @media screen and (max-width: 1200px) {
+      main #about .about-wrapper {
+        height: 500px; }
+        main #about .about-wrapper .about-head .ah-image {
+          height: 200px;
+          width: 200px; }
+        main #about .about-wrapper .about-description {
+          width: 90%;
+          padding: 1rem; }
+          main #about .about-wrapper .about-description h2 {
+            font-size: 2rem;
+            line-height: 2.5rem; }
+          main #about .about-wrapper .about-description h3 {
+            font-size: 1.4rem;
+            line-height: 2.5rem; }
+          main #about .about-wrapper .about-description p {
+            font-size: 1rem;
+            line-height: 1.2rem; } }
+    @media screen and (max-width: 992px) {
+      main #about {
+        padding: 1.5rem; }
+        main #about .about-wrapper {
+          height: 600px;
+          flex-direction: column; }
+          main #about .about-wrapper .about-head {
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+            padding: .5rem; }
+            main #about .about-wrapper .about-head .ah-image {
+              height: 150px;
+              width: 150px; }
+          main #about .about-wrapper .about-description {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0 0 20px 20px; }
+            main #about .about-wrapper .about-description h2 {
+              font-size: 1.8rem;
+              line-height: 2.5rem;
+              text-align: center; }
+            main #about .about-wrapper .about-description h3 {
+              font-size: 1.4rem;
+              line-height: 2.5rem; }
+            main #about .about-wrapper .about-description p {
+              font-size: .9rem;
+              line-height: 1.2rem; } }
+    @media screen and (max-width: 768px) {
+      main #about .about-wrapper {
+        height: 500px; }
+        main #about .about-wrapper .about-head {
+          background: #ababf7; }
+          main #about .about-wrapper .about-head .ah-image {
+            height: 200px;
+            width: 200px; }
+        main #about .about-wrapper .about-description {
+          width: 90%;
+          padding: 1rem; }
+          main #about .about-wrapper .about-description h2 {
+            font-size: 1.8rem;
+            line-height: 2.5rem; }
+          main #about .about-wrapper .about-description h3 {
+            font-size: 1.3rem;
+            line-height: 2.5rem; }
+          main #about .about-wrapper .about-description p {
+            font-size: .9rem;
+            line-height: 1.2rem; } }
   main #skills {
     background-color: white;
     color: #0d1d2c;

@@ -72,7 +72,6 @@ main {
     // border: 2px solid green;
     background: $secondary-color;
     border-radius: 5px;
-    height: 550px;
     display: flex;
 
     .about-head {
@@ -86,7 +85,8 @@ main {
       align-items: center;
 
       .ah-image {
-        border: 2px solid black;
+        border: 2px solid $primary-color;
+        border-radius: 50%;
         height: 300px;
         width: 300px;
       }    
@@ -115,7 +115,165 @@ main {
         margin-top: 1rem;
       }
     }
-  } // end of about container //
+  } // end of about wrapper //
+
+  // MQ starting on '.about'
+  @media screen and (max-width: 1440px) {
+    .about-wrapper {
+      height: 500px;
+
+      .about-head {
+
+        .ah-image {
+          height: 275px;
+          width: 275px;
+        }         
+      }
+
+      .about-description {
+        width: 80%;
+        padding: 1.5rem;
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        h3 {
+          font-size: 1.4rem;
+          margin-top: .2rem;
+        }
+
+        p {
+          font-size: 1rem;
+          line-height: 1.4rem;
+        }
+      }
+    }
+
+  }
+
+  // MQ starting on '.about'
+  @media screen and (max-width: 1200px) {
+    .about-wrapper {
+        height: 500px;
+
+      .about-head {
+
+        .ah-image {
+          height: 200px;
+          width: 200px;
+        } 
+      }
+
+      .about-description {
+        width: 90%;
+        padding: 1rem;
+
+        h2 {
+          font-size: 2rem;
+          line-height: 2.5rem;
+        }
+        
+        h3 {
+          // margin-top: 0;
+          font-size: 1.4rem;
+          line-height: 2.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+          line-height: 1.2rem;
+        }
+      }
+    }
+  }
+
+  // MQ starting on '.about'
+  @media screen and (max-width: 992px) {
+    // border: 2px solid cyan;
+    padding: 1.5rem;
+
+    .about-wrapper {
+      // border: 2px solid green;
+      height: 600px;
+      flex-direction: column;
+      // background: $alt-yellow;
+
+      .about-head {
+        // border: 2px solid blue;
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+        padding: .5rem;
+
+        .ah-image {
+          height: 150px;
+          width: 150px;
+        } 
+      }
+
+      .about-description {
+        // border: 2px solid red;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 0 0 20px 20px;
+
+        h2 {
+          font-size: 1.8rem;
+          line-height: 2.5rem;
+          text-align: center;
+        }
+        
+        h3 {
+          // margin-top: 0;
+          font-size: 1.4rem;
+          line-height: 2.5rem;
+        }
+
+        p {
+          font-size: .9rem;
+          line-height: 1.2rem;
+        }
+      }
+    }
+  }
+
+  // MQ starting on '.about'
+  @media screen and (max-width: 768px) {
+    .about-wrapper {
+        height: 500px;
+
+      .about-head {
+        background: rgb(171, 171, 247);
+
+        .ah-image {
+          height: 200px;
+          width: 200px;
+        } 
+      }
+
+      .about-description {
+        width: 90%;
+        padding: 1rem;
+
+        h2 {
+          font-size: 1.8rem;
+          line-height: 2.5rem;
+        }
+        
+        h3 {
+          // margin-top: 0;
+          font-size: 1.3rem;
+          line-height: 2.5rem;
+        }
+
+        p {
+          font-size: .9rem;
+          line-height: 1.2rem;
+        }
+      }
+    }
+  }
+
 } // --- End of About Section --- //
 
 
