@@ -327,7 +327,7 @@ body main {
               line-height: 1.1rem; } }
     @media screen and (max-width: 576px) {
       body main #about {
-        padding: 1.5rem; }
+        padding: .5rem; }
         body main #about .about-wrapper {
           height: 600px;
           flex-direction: column; }
@@ -348,11 +348,11 @@ body main {
               line-height: 2.5rem;
               text-align: center; }
             body main #about .about-wrapper .about-description h3 {
-              font-size: 1.4rem;
-              line-height: 2.5rem; }
+              font-size: 1.3rem;
+              line-height: 2.2rem; }
             body main #about .about-wrapper .about-description p {
               font-size: .9rem;
-              line-height: 1.2rem; } }
+              line-height: 1.1rem; } }
   body main #skills {
     background-color: white;
     color: #0d1d2c;
@@ -363,7 +363,7 @@ body main {
     align-items: center;
     justify-content: center; }
     body main #skills .skills-container {
-      width: 800px; }
+      max-width: 800px; }
       body main #skills .skills-container .skills-top {
         margin-bottom: 2rem; }
         body main #skills .skills-container .skills-top .st-header {
@@ -386,7 +386,9 @@ body main {
             font-weight: 500; }
         body main #skills .skills-container .skills-top .st-body .st-wrapper-fe {
           display: flex;
-          justify-content: center; }
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-bottom: 2rem; }
           body main #skills .skills-container .skills-top .st-body .st-wrapper-fe #htmlP {
             color: #F16529; }
           body main #skills .skills-container .skills-top .st-body .st-wrapper-fe #cssP {
@@ -402,6 +404,17 @@ body main {
           body main #skills .skills-container .skills-top .st-body .st-wrapper-fe #jqueryP {
             height: 30px;
             width: 30px; }
+          body main #skills .skills-container .skills-top .st-body .st-wrapper-fe .st-items {
+            padding: 0 .8rem;
+            margin-bottom: .5rem;
+            text-align: center; }
+            @media (max-width: 768px) {
+              body main #skills .skills-container .skills-top .st-body .st-wrapper-fe .st-items {
+                padding: 0;
+                flex-basis: 25%; } }
+            body main #skills .skills-container .skills-top .st-body .st-wrapper-fe .st-items p {
+              font-size: 1rem;
+              font-weight: 500; }
         body main #skills .skills-container .skills-top .st-body .st-wrapper-beo {
           display: flex;
           justify-content: center; }
@@ -409,14 +422,25 @@ body main {
             color: #3C873A; }
           body main #skills .skills-container .skills-top .st-body .st-wrapper-beo #jsonP {
             color: #FFAE41;
-            height: 31px;
-            width: 31px; }
+            height: 29px;
+            width: 29px; }
           body main #skills .skills-container .skills-top .st-body .st-wrapper-beo #phpP {
             color: #474A8A; }
           body main #skills .skills-container .skills-top .st-body .st-wrapper-beo #wordpressP {
             color: #00749C; }
           body main #skills .skills-container .skills-top .st-body .st-wrapper-beo #gitP {
             color: #333333; }
+          body main #skills .skills-container .skills-top .st-body .st-wrapper-beo .st-items {
+            padding: 0 .8rem;
+            margin-bottom: .5rem;
+            text-align: center; }
+            @media (max-width: 768px) {
+              body main #skills .skills-container .skills-top .st-body .st-wrapper-beo .st-items {
+                padding: 0;
+                flex-basis: 25%; } }
+            body main #skills .skills-container .skills-top .st-body .st-wrapper-beo .st-items p {
+              font-size: 1rem;
+              font-weight: 500; }
       body main #skills .skills-container .skills-process {
         margin-bottom: 2rem; }
         body main #skills .skills-container .skills-process .sp-header {
@@ -433,10 +457,17 @@ body main {
             left: 47%; }
         body main #skills .skills-container .skills-process .sp-body {
           display: flex;
-          justify-content: center; }
+          justify-content: center;
+          flex-wrap: wrap;
+          padding: 1rem 1rem; }
           body main #skills .skills-container .skills-process .sp-body .sp-items {
-            padding-right: 1.5rem;
+            padding: 0 .8rem;
+            margin-bottom: 2rem;
             text-align: center; }
+            @media (max-width: 768px) {
+              body main #skills .skills-container .skills-process .sp-body .sp-items {
+                padding: 0 .5rem;
+                flex-basis: 33%; } }
             body main #skills .skills-container .skills-process .sp-body .sp-items p {
               font-size: 1rem;
               font-weight: 500; }

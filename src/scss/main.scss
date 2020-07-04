@@ -350,7 +350,7 @@ body {
       // MQ starting on '.about'
       @media screen and (max-width: 576px) {
         // border: 2px solid cyan;
-        padding: 1.5rem;
+        padding: .5rem;
 
         .about-wrapper {
           // border: 2px solid green;
@@ -385,22 +385,24 @@ body {
             
             h3 {
               // margin-top: 0;
-              font-size: 1.4rem;
-              line-height: 2.5rem;
+              font-size: 1.3rem;
+              line-height: 2.2rem;
             }
 
             p {
               font-size: .9rem;
-              line-height: 1.2rem;
+              line-height: 1.1rem;
             }
           }
         }
       }
+
     } // --- End of About Section --- //
 
 
     // --- ***Skills Section*** --- //
     #skills {
+      // border: 2px solid yellow;
       background-color: $fourth-color;
       color: $primary-color;
       padding: 2rem 0;
@@ -411,10 +413,11 @@ body {
       justify-content: center;
 
       .skills-container {
-        // border: 2px solid red;
-        width: 800px;
+        // border: 2px solid cyan;
+        max-width: 800px;
 
         .skills-top {
+          // border: 2px solid blue;
           margin-bottom: 2rem;
 
           .st-header {
@@ -434,6 +437,7 @@ body {
           }
 
           .st-body {
+            // border: 2px solid red;
             .st-items {
               padding-right: .5rem;
               text-align: center;
@@ -445,8 +449,12 @@ body {
             }
 
             .st-wrapper-fe {
+              // border: 2px solid red;
               display: flex;
               justify-content: center;
+              flex-wrap: wrap;
+              margin-bottom: 2rem;
+
               #htmlP {
                 color: #F16529;
               }
@@ -475,9 +483,27 @@ body {
                 height: 30px;
                 width: 30px;
               }
+
+              .st-items {
+                // border: 2px solid green;
+                padding: 0 .8rem;
+                margin-bottom: .5rem;
+                text-align: center;
+  
+                @media (max-width: 768px) {
+                  padding: 0;
+                  flex-basis: 25%;
+                }
+        
+                p {
+                  font-size: 1rem;
+                  font-weight: 500;
+                }
+              }    
             }
 
             .st-wrapper-beo {
+              // border: 2px solid red;
               display: flex;
               justify-content: center;
             
@@ -487,8 +513,8 @@ body {
 
               #jsonP {
                 color: #FFAE41;
-                height: 31px;
-                width: 31px;
+                height: 29px;
+                width: 29px;
               }
 
               #phpP {
@@ -502,14 +528,33 @@ body {
               #gitP {
                 color: #333333;
               }
+
+              .st-items {
+                // border: 2px solid green;
+                padding: 0 .8rem;
+                margin-bottom: .5rem;
+                text-align: center;
+  
+                @media (max-width: 768px) {
+                  padding: 0;
+                  flex-basis: 25%;
+                }
+        
+                p {
+                  font-size: 1rem;
+                  font-weight: 500;
+                }
+              } 
             }
           }
         }
 
         .skills-process {
+          // border: 2px solid green;
           margin-bottom: 2rem;
 
           .sp-header {
+            // border: 2px solid blue;
             text-align: center;
             padding: 2rem 0;
             position: relative;
@@ -526,11 +571,22 @@ body {
           }
 
           .sp-body {
+            // border: 2px solid red;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
+            padding: 1rem 1rem;
+            
             .sp-items {
-              padding-right: 1.5rem;
+              // border: 2px solid green;
+              padding: 0 .8rem;
+              margin-bottom: 2rem;
               text-align: center;
+
+              @media (max-width: 768px) {
+                padding: 0 .5rem;
+                flex-basis: 33%;
+              }
       
               p {
                 font-size: 1rem;
