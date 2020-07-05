@@ -1,8 +1,8 @@
-// nav color
+// Nav Color
 $primary-color: #0d1d2c;
-// div color
+// Div Color
 $secondary-color: #d4d8e2;
-// outline
+// Outline
 $tertiary-color: #ffffff;
 // Text 1
 $fourth-color: white;
@@ -10,8 +10,10 @@ $fourth-color: white;
 $fifth-color: #080738;
 // Alt Yellow
 $alt-yellow: #FFF7D9;
-// alt-blue
+// Alt Blue
 $alt-blue: #6E90B5;
+// Alt Green
+$alt-green: #869e84;
 
 $home-image: url(../img/home.jpg);
 $about-image: url(../img/canoe2.jpg);
@@ -75,12 +77,12 @@ a {
 
 @mixin easeOutFT() {
   transition: all .2s ease-in-out;
-  color: $tertiary-color;
+  color: $tertiary-color; 
 }
 
 @mixin easeOutNAV() {
   transition: all .2s ease-in-out;
-  color: $secondary-color;
+  color: $alt-yellow;
 }
 
 @mixin button() {

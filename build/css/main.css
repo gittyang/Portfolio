@@ -64,7 +64,7 @@ header {
       color: white; }
     header .menu-nav .nav-link:hover {
       transition: all .2s ease-in-out;
-      color: #d4d8e2; }
+      color: #FFF7D9; }
     header .menu-nav .nav-item-line {
       background: white;
       margin: 1rem 2rem;
@@ -86,7 +86,7 @@ header {
           color: white; }
         header .menu-nav .nav-link:hover {
           transition: all .2s ease-in-out;
-          color: #d4d8e2; }
+          color: #FFF7D9; }
         header .menu-nav .nav-item-line {
           background: white;
           margin: 1rem 1rem;
@@ -105,7 +105,7 @@ header {
           color: white; }
         header .menu-nav .nav-link:hover {
           transition: all .2s ease-in-out;
-          color: #d4d8e2; }
+          color: #FFF7D9; }
         header .menu-nav .nav-item-line {
           background: white;
           margin: 1rem 1rem;
@@ -234,7 +234,7 @@ body main {
           margin-top: 1rem; }
     @media screen and (max-width: 1440px) {
       body main #about .about-wrapper {
-        height: 500px; }
+        height: auto; }
         body main #about .about-wrapper .about-head .ah-image {
           height: 275px;
           width: 275px; }
@@ -251,7 +251,7 @@ body main {
             line-height: 1.4rem; } }
     @media screen and (max-width: 1200px) {
       body main #about .about-wrapper {
-        height: 500px; }
+        height: auto; }
         body main #about .about-wrapper .about-head .ah-image {
           height: 200px;
           width: 200px; }
@@ -271,7 +271,7 @@ body main {
       body main #about {
         padding: 1.5rem; }
         body main #about .about-wrapper {
-          height: 600px;
+          height: auto;
           flex-direction: column; }
           body main #about .about-wrapper .about-head {
             width: 100%;
@@ -298,7 +298,7 @@ body main {
       body main #about {
         padding: .5rem; }
         body main #about .about-wrapper {
-          height: 600px;
+          height: auto;
           flex-direction: column; }
           body main #about .about-wrapper .about-head {
             width: 100%;
@@ -325,7 +325,7 @@ body main {
       body main #about {
         padding: .5rem; }
         body main #about .about-wrapper {
-          height: 600px;
+          height: auto;
           flex-direction: column; }
           body main #about .about-wrapper .about-head {
             width: 100%;
@@ -486,7 +486,7 @@ body main {
             color: #A60004; }
   body main #projects {
     background: #d4d8e2;
-    min-height: 80vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center; }
@@ -653,31 +653,54 @@ body main {
   body main #contact {
     background-color: white;
     color: #0d1d2c;
-    min-height: 80vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center; }
-    body main #contact .contact-top {
+    body main #contact .contact-content {
       display: flex;
       justify-content: center;
       width: 100%;
       height: 500px; }
-      body main #contact .contact-top .contact-text {
+      @media (max-width: 1200px) {
+        body main #contact .contact-content {
+          width: 95%; } }
+      @media (max-width: 992px) {
+        body main #contact .contact-content .contact-text p {
+          font-size: 1rem; } }
+      @media (max-width: 768px) {
+        body main #contact .contact-content .contact-text {
+          align-items: center; } }
+      body main #contact .contact-content .contact-text {
         display: flex;
         flex-direction: column;
         justify-content: center; }
-        body main #contact .contact-top .contact-text h2 {
+        body main #contact .contact-content .contact-text h2 {
           margin-bottom: 2rem;
           display: flex;
           justify-content: center; }
-        body main #contact .contact-top .contact-text p {
+        body main #contact .contact-content .contact-text p {
           margin-bottom: 1rem; }
-      body main #contact .contact-top .contact-svg {
+        body main #contact .contact-content .contact-text a {
+          width: fit-content; }
+      body main #contact .contact-content .contact-svg {
         width: 50%;
         display: flex;
         justify-content: center; }
-        body main #contact .contact-top .contact-svg img {
+        @media (max-width: 1200px) {
+          body main #contact .contact-content .contact-svg {
+            width: 40%; } }
+        @media (max-width: 992px) {
+          body main #contact .contact-content .contact-svg {
+            width: 30%; } }
+        @media (max-width: 768px) {
+          body main #contact .contact-content .contact-svg {
+            display: none; } }
+        body main #contact .contact-content .contact-svg img {
           width: 80%; }
+          @media (max-width: 1200px) {
+            body main #contact .contact-content .contact-svg img {
+              width: 100%; } }
   body main footer {
     background-color: #d4d8e2;
     color: #0d1d2c;

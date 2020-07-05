@@ -178,7 +178,7 @@ body {
       // MQ starting on '.about'
       @media screen and (max-width: 1440px) {
         .about-wrapper {
-          height: 500px;
+          height: auto;
 
           .about-head {
 
@@ -213,7 +213,7 @@ body {
       // MQ starting on '.about'
       @media screen and (max-width: 1200px) {
         .about-wrapper {
-            height: 500px;
+          height: auto;
 
           .about-head {
             // background-color: red;
@@ -253,7 +253,7 @@ body {
 
         .about-wrapper {
           // border: 2px solid green;
-          height: 600px;
+          height: auto;
           flex-direction: column;
 
           .about-head {
@@ -301,7 +301,7 @@ body {
 
         .about-wrapper {
           // border: 2px solid green;
-          height: 600px;
+          height: auto;
           flex-direction: column;
           // background: $alt-yellow;
 
@@ -350,7 +350,7 @@ body {
 
         .about-wrapper {
           // border: 2px solid green;
-          height: 600px;
+          height: auto;
           flex-direction: column;
 
           .about-head {
@@ -642,7 +642,8 @@ body {
       // border: 2px solid red;
       background: $secondary-color;
       // padding: 2rem 0;
-      min-height: 80vh;
+      // min-height: 80vh;
+      height: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -875,29 +876,43 @@ body {
       // border: 2px solid blue;
       background-color: white;   
       color: $primary-color;   
-      // padding: 2rem;
-      min-height: 80vh;  
+      height: auto; 
       display: flex;
       justify-content: center;
       align-items: center; 
       
-      .contact-top {
+      .contact-content {
         // border: 2px solid red;
         display: flex;
         justify-content: center;
-        // flex-direction: column;
-        // align-items: center;
         width: 100%;
         height: 500px;
 
+        @media (max-width: 1200px) {
+          width: 95%;
+        }
+
+        @media (max-width: 992px) {
+
+          .contact-text {
+
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+
+        @media (max-width: 768px) {
+          .contact-text {
+            align-items: center;
+          }
+        }
+
         .contact-text {
           // border: 2px solid cyan;
-          // width: 50%;
           display: flex;
           flex-direction: column;
           justify-content: center;
-          // align-items: center;
-          // padding: 5rem 0;
 
           h2 {
             // border: 2px solid green;
@@ -910,6 +925,11 @@ body {
             // border: 2px solid red;
             margin-bottom: 1rem;
           }
+
+          a {
+            // border: 2px solid green;
+            width: fit-content;
+          }
         }
 
         .contact-svg {
@@ -917,10 +937,28 @@ body {
           width: 50%;
           display: flex;
           justify-content: center;
+
+          @media (max-width: 1200px) {
+            // border: 2px solid blue;
+            width: 40%;
+          }
+
+          @media (max-width: 992px) {
+            // border: 2px solid green;
+            width: 30%;
+          }
+
+          @media (max-width: 768px) {
+            display: none;
+          }
     
           img {
             // border: 2px solid green;
             width: 80%;
+
+            @media (max-width: 1200px) {
+              width: 100%;
+            }
           }
         }
       }
