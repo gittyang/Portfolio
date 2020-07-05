@@ -252,11 +252,9 @@ body main {
     @media screen and (max-width: 1200px) {
       body main #about .about-wrapper {
         height: 500px; }
-        body main #about .about-wrapper .about-head {
-          background-color: red; }
-          body main #about .about-wrapper .about-head .ah-image {
-            height: 200px;
-            width: 200px; }
+        body main #about .about-wrapper .about-head .ah-image {
+          height: 200px;
+          width: 200px; }
         body main #about .about-wrapper .about-description {
           width: 90%;
           padding: 1rem; }
@@ -278,8 +276,7 @@ body main {
           body main #about .about-wrapper .about-head {
             width: 100%;
             border-radius: 20px 20px 0 0;
-            padding: .5rem;
-            background-color: #fc2c2c; }
+            padding: .5rem; }
             body main #about .about-wrapper .about-head .ah-image {
               height: 150px;
               width: 150px; }
@@ -306,8 +303,7 @@ body main {
           body main #about .about-wrapper .about-head {
             width: 100%;
             border-radius: 20px 20px 0 0;
-            padding: .5rem;
-            background-color: #fda1a1; }
+            padding: .5rem; }
             body main #about .about-wrapper .about-head .ah-image {
               height: 150px;
               width: 150px; }
@@ -334,8 +330,7 @@ body main {
           body main #about .about-wrapper .about-head {
             width: 100%;
             border-radius: 20px 20px 0 0;
-            padding: .5rem;
-            background-color: #fda1a1; }
+            padding: .5rem; }
             body main #about .about-wrapper .about-head .ah-image {
               height: 150px;
               width: 150px; }
@@ -506,15 +501,13 @@ body main {
         body main #projects .projects-container .project-1 .project-item-wrap,
         body main #projects .projects-container .project-2 .project-item-wrap,
         body main #projects .projects-container .project-3 .project-item-wrap {
-          height: 400px;
           display: flex;
           padding: 3rem;
-          width: 1200px; }
+          max-width: 1200px; }
           body main #projects .projects-container .project-1 .project-item-wrap .project-head,
           body main #projects .projects-container .project-2 .project-item-wrap .project-head,
           body main #projects .projects-container .project-3 .project-item-wrap .project-head {
-            border: 2px solid black;
-            height: 100%;
+            height: 300px;
             width: 1000px;
             box-shadow: 2px 5px 15px; }
           body main #projects .projects-container .project-1 .project-item-wrap .project-body,
@@ -562,6 +555,86 @@ body main {
                   background-color: #ffffff;
                   border: 2px solid #0d1d2c;
                   color: #0d1d2c; }
+        @media (max-width: 1440px) {
+          body main #projects .projects-container .project-1 .project-item-wrap,
+          body main #projects .projects-container .project-2 .project-item-wrap,
+          body main #projects .projects-container .project-3 .project-item-wrap {
+            display: flex;
+            padding: 2rem;
+            max-width: 1000px; }
+            body main #projects .projects-container .project-1 .project-item-wrap .project-head,
+            body main #projects .projects-container .project-2 .project-item-wrap .project-head,
+            body main #projects .projects-container .project-3 .project-item-wrap .project-head {
+              border: 2px solid black;
+              height: 250px;
+              width: 850px;
+              margin-right: 1rem; } }
+        @media (max-width: 1200px) {
+          body main #projects .projects-container .project-1 .project-item-wrap,
+          body main #projects .projects-container .project-2 .project-item-wrap,
+          body main #projects .projects-container .project-3 .project-item-wrap {
+            padding: 1.5rem;
+            max-width: 800px; }
+            body main #projects .projects-container .project-1 .project-item-wrap .project-head,
+            body main #projects .projects-container .project-2 .project-item-wrap .project-head,
+            body main #projects .projects-container .project-3 .project-item-wrap .project-head {
+              height: 200px;
+              width: 700px;
+              margin-right: 2rem; }
+            body main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-wrapper .pb-top h2,
+            body main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-wrapper .pb-top h2,
+            body main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-wrapper .pb-top h2 {
+              font-size: 2.1rem; } }
+        @media (max-width: 992px) {
+          body main #projects .projects-container .project-1 .project-item-wrap,
+          body main #projects .projects-container .project-2 .project-item-wrap,
+          body main #projects .projects-container .project-3 .project-item-wrap {
+            flex-direction: column;
+            padding: 2.5rem; }
+            body main #projects .projects-container .project-1 .project-item-wrap .project-head,
+            body main #projects .projects-container .project-2 .project-item-wrap .project-head,
+            body main #projects .projects-container .project-3 .project-item-wrap .project-head {
+              height: 285px;
+              width: 500px;
+              margin-right: 0; }
+            body main #projects .projects-container .project-1 .project-item-wrap .project-body,
+            body main #projects .projects-container .project-2 .project-item-wrap .project-body,
+            body main #projects .projects-container .project-3 .project-item-wrap .project-body {
+              margin: 0;
+              padding: 0;
+              height: auto;
+              display: block; }
+              body main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-wrapper,
+              body main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-wrapper,
+              body main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-wrapper {
+                text-align: center;
+                margin-top: 2rem;
+                height: auto; }
+                body main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-wrapper .pb-button,
+                body main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-wrapper .pb-button,
+                body main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-wrapper .pb-button {
+                  justify-content: center;
+                  margin-top: 1rem; } }
+        @media (max-width: 768px) {
+          body main #projects .projects-container .project-1 .project-item-wrap,
+          body main #projects .projects-container .project-2 .project-item-wrap,
+          body main #projects .projects-container .project-3 .project-item-wrap {
+            padding: 2rem 0;
+            margin: 0; }
+            body main #projects .projects-container .project-1 .project-item-wrap .project-head,
+            body main #projects .projects-container .project-2 .project-item-wrap .project-head,
+            body main #projects .projects-container .project-3 .project-item-wrap .project-head {
+              height: 235px;
+              width: 410px; }
+            body main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-wrapper .pb-bottom p,
+            body main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-wrapper .pb-bottom p,
+            body main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-wrapper .pb-bottom p {
+              font-size: 1rem; }
+            body main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-wrapper .pb-button,
+            body main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-wrapper .pb-button,
+            body main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-wrapper .pb-button {
+              justify-content: center;
+              margin-top: 1rem; } }
     body main #projects .project-1 {
       background-color: #6E90B5; }
       body main #projects .project-1 .project-head {
