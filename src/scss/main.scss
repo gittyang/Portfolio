@@ -114,6 +114,35 @@ body {
           }
         }
       }
+
+      // #home
+      @media screen and (max-width: 576px) {
+
+        .home-title {
+          align-items: center;
+
+          .cta a:last-child {
+            margin: 0;
+          }
+        }
+      }
+
+      // #home
+      @media screen and (max-width: 414px) {
+
+        padding: 2rem;
+
+        .home-title {
+          // border: 2px solid red;
+          h1 {
+            font-size: 1.8rem;
+          }
+
+          p {
+            font-size: .9rem;
+          }
+        }
+      }
     }  // --- End of Home Section --- //
 
 
@@ -385,6 +414,39 @@ body {
 
             p {
               font-size: .9rem;
+              line-height: 1.1rem;
+            }
+
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+
+      // MQ starting on '.about'
+      @media screen and (max-width: 414px) {
+        // border: 2px solid cyan;
+
+        .about-wrapper {
+          // border: 2px solid green;
+
+          .about-description {
+            // border: 2px solid red;
+
+            h2 {
+              font-size: 1.5rem;
+            }
+            
+            h3 {
+              // margin-top: 0;
+              font-size: 1.1rem;
+              line-height: 1.3rem;
+              margin-bottom: .5rem;
+            }
+
+            p {
+              font-size: .8rem;
               line-height: 1.1rem;
             }
           }
@@ -836,6 +898,82 @@ body {
               }
             }
           }
+
+          // .project-#
+          @media (max-width: 576px) {
+            // border: 2px solid blue;
+
+            .project-item-wrap {
+              // border: 2px solid green;
+  
+              .project-head {
+                // border: 2px solid yellow; 
+                height: 215px;
+                width: 370px;
+              }
+
+              .project-body {
+                // border: 2px solid cyan;
+        
+                .pb-wrapper {
+                  // border: 2px solid brown;
+
+                  .pb-top {
+
+                    h2 {
+                      font-size: 1.9rem;
+                    }
+                  }
+
+                  .pb-bottom {
+                    // border: 2px solid red;
+
+                    p {
+                      font-size: .9rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          // .project-#
+          @media (max-width: 414px) {
+            // border: 2px solid blue;
+
+            .project-item-wrap {
+              // border: 2px solid green;
+  
+              .project-head {
+                // border: 2px solid yellow; 
+                height: 190px;
+                width: 325px;
+              }
+
+              .project-body {
+                // border: 2px solid cyan;
+        
+                .pb-wrapper {
+                  // border: 2px solid brown;
+
+                  .pb-top {
+
+                    h2 {
+                      font-size: 1.8rem;
+                    }
+                  }
+
+                  .pb-bottom {
+                    // border: 2px solid red;
+
+                    p {
+                      font-size: .8rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     
@@ -876,7 +1014,7 @@ body {
       // border: 2px solid blue;
       background-color: white;   
       color: $primary-color;   
-      height: auto; 
+      height: 80vh; 
       display: flex;
       justify-content: center;
       align-items: center; 
@@ -905,6 +1043,34 @@ body {
         @media (max-width: 768px) {
           .contact-text {
             align-items: center;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .contact-text {
+            align-items: center;
+
+            h2 {
+              font-size: 2.2rem;
+            }
+
+            h3 {
+              font-size: 1.3rem;
+            }
+
+            p {
+              font-size: .9rem;
+            }
+          }
+        }
+
+        @media (max-width: 414px) {
+          .contact-text {
+            align-items: center;
+
+            p {
+              font-size: .8rem;
+            }
           }
         }
 

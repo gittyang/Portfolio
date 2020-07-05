@@ -195,6 +195,18 @@ body main {
       body main #home .cta a {
         font-size: .8rem;
         padding: .5rem; } }
+    @media screen and (max-width: 576px) {
+      body main #home .home-title {
+        align-items: center; }
+        body main #home .home-title .cta a:last-child {
+          margin: 0; } }
+    @media screen and (max-width: 414px) {
+      body main #home {
+        padding: 2rem; }
+        body main #home .home-title h1 {
+          font-size: 1.8rem; }
+        body main #home .home-title p {
+          font-size: .9rem; } }
   body main #about {
     background: #d4d8e2;
     padding: 2rem;
@@ -347,7 +359,19 @@ body main {
               line-height: 2.2rem; }
             body main #about .about-wrapper .about-description p {
               font-size: .9rem;
-              line-height: 1.1rem; } }
+              line-height: 1.1rem; }
+            body main #about .about-wrapper .about-description br {
+              display: none; } }
+    @media screen and (max-width: 414px) {
+      body main #about .about-wrapper .about-description h2 {
+        font-size: 1.5rem; }
+      body main #about .about-wrapper .about-description h3 {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+        margin-bottom: .5rem; }
+      body main #about .about-wrapper .about-description p {
+        font-size: .8rem;
+        line-height: 1.1rem; } }
   body main #skills {
     background-color: white;
     color: #0d1d2c;
@@ -635,6 +659,34 @@ body main {
             body main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-wrapper .pb-button {
               justify-content: center;
               margin-top: 1rem; } }
+        @media (max-width: 576px) {
+          body main #projects .projects-container .project-1 .project-item-wrap .project-head,
+          body main #projects .projects-container .project-2 .project-item-wrap .project-head,
+          body main #projects .projects-container .project-3 .project-item-wrap .project-head {
+            height: 215px;
+            width: 370px; }
+          body main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-wrapper .pb-top h2,
+          body main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-wrapper .pb-top h2,
+          body main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-wrapper .pb-top h2 {
+            font-size: 1.9rem; }
+          body main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-wrapper .pb-bottom p,
+          body main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-wrapper .pb-bottom p,
+          body main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-wrapper .pb-bottom p {
+            font-size: .9rem; } }
+        @media (max-width: 414px) {
+          body main #projects .projects-container .project-1 .project-item-wrap .project-head,
+          body main #projects .projects-container .project-2 .project-item-wrap .project-head,
+          body main #projects .projects-container .project-3 .project-item-wrap .project-head {
+            height: 190px;
+            width: 325px; }
+          body main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-wrapper .pb-top h2,
+          body main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-wrapper .pb-top h2,
+          body main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-wrapper .pb-top h2 {
+            font-size: 1.8rem; }
+          body main #projects .projects-container .project-1 .project-item-wrap .project-body .pb-wrapper .pb-bottom p,
+          body main #projects .projects-container .project-2 .project-item-wrap .project-body .pb-wrapper .pb-bottom p,
+          body main #projects .projects-container .project-3 .project-item-wrap .project-body .pb-wrapper .pb-bottom p {
+            font-size: .8rem; } }
     body main #projects .project-1 {
       background-color: #6E90B5; }
       body main #projects .project-1 .project-head {
@@ -653,7 +705,7 @@ body main {
   body main #contact {
     background-color: white;
     color: #0d1d2c;
-    height: auto;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -671,6 +723,20 @@ body main {
       @media (max-width: 768px) {
         body main #contact .contact-content .contact-text {
           align-items: center; } }
+      @media (max-width: 576px) {
+        body main #contact .contact-content .contact-text {
+          align-items: center; }
+          body main #contact .contact-content .contact-text h2 {
+            font-size: 2.2rem; }
+          body main #contact .contact-content .contact-text h3 {
+            font-size: 1.3rem; }
+          body main #contact .contact-content .contact-text p {
+            font-size: .9rem; } }
+      @media (max-width: 414px) {
+        body main #contact .contact-content .contact-text {
+          align-items: center; }
+          body main #contact .contact-content .contact-text p {
+            font-size: .8rem; } }
       body main #contact .contact-content .contact-text {
         display: flex;
         flex-direction: column;
